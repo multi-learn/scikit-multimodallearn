@@ -155,6 +155,10 @@ def setup_package():
     #   'Tracker': '{}/issues'.format(url)}
     packages = find_packages(exclude=['*.tests'])
     include_package_data = True
+    extras_require = {
+        'test': ["pytest", "pytest-cov"],
+        'doc': ["sphinx==5.0", "numpydoc", "sphinx_gallery", "matplotlib", "sphinx_rtd_theme"]}
+
     # python_requires=python_requires, description=description,author=author,
     # classifiers=classifiers, keywords=keywords, install_requires=install_requires,
     setup(
@@ -162,7 +166,8 @@ def setup_package():
           long_description=long_description,
           long_description_content_type=long_description_content_type,
           packages=packages,
-          include_package_data=include_package_data)
+          include_package_data=include_package_data
+          extras_require=extras_require)
 
 
 if __name__ == "__main__":
