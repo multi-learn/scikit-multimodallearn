@@ -45,7 +45,6 @@ from setuptools import setup, find_packages
 from distutils.command.clean import clean as _clean
 from distutils.dir_util import remove_tree
 from distutils.command.sdist import sdist
-import multimodal
 
 try:
     import numpy
@@ -140,8 +139,7 @@ class m_sdist(sdist):
 
 def setup_package():
     """Setup function"""
-
-    name = 'scikit-multimodallearn'
+    name  = 'scikit-multimodallearn'
     version = get_version()
     multimodal_dir = 'multimodal'
     set_version(multimodal_dir, version)
@@ -177,15 +175,13 @@ def setup_package():
          ]
     keywords = ['machine learning, supervised learning, classification, ensemble methods, boosting, kernel']
     packages = find_packages(exclude=['*.tests'])
-    setup_requires = ['numpy']
     install_requires = ['scikit-learn==1.2.1', 'numpy', 'scipy', 'cvxopt' ]
-    python_requires = '>=3.6'
     extras_require = {
         'dev': ['pytest', 'pytest-cov'],
         'doc': ['sphinx==5.0', 'numpydoc', 'sphinx_gallery', 'matplotlib', "sphinx_rtd_theme"]}
     include_package_data = True
-
-    setup(name=name,
+    # python_requires=python_requires,
+    setup(
           version=version,
           description=description,
           long_description=long_description,
@@ -199,9 +195,7 @@ def setup_package():
           classifiers=classifiers,
           keywords=keywords,
           packages=packages,
-          setup_requires=setup_requires,
           install_requires=install_requires,
-          python_requires=python_requires,
           extras_require=extras_require,
           include_package_data=include_package_data)
 
