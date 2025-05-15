@@ -160,7 +160,7 @@ def setup_package():
     author = 'Dominique Benielli and Sokol Koço and Florent Jaillet and Riikka Huusari ' \
              'and Baptiste Bauvin and Cécile Capponi and Hachem Kadri'
     author_email = 'contact.dev@lis-lab.fr'
-    license = 'newBSD'
+    license = 'BSD License'
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Science/Research',
