@@ -48,7 +48,7 @@ pages:
         - export LANG=$(locale -a | grep en_US)
         - pip3 install --upgrade setuptools wheel packaging
         - pip3 install -e .
-        - pip3 install -e . [doc]
+        - pip3 install -e .[doc]
         - rm -Rf build
         - python3 setup.py build_sphinx
         - cp -r build/sphinx/html public
