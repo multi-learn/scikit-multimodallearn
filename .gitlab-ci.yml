@@ -30,7 +30,6 @@ doc:
         paths:
           - public
 
-#        - python3 setup.py build_sphinx
 
 # project public
 #
