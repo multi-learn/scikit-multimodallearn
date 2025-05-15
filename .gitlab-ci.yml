@@ -4,7 +4,7 @@ tests:
     tags:
         - docker
     script:
-        - # if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
+        - if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
         - pip install -e .[test]
         - pytest-3
     coverage: '/^TOTAL.+?(\d+\%)$/'
@@ -22,7 +22,7 @@ doc:
     script:
         - export LC_ALL=$(locale -a | grep en_US)
         - export LANG=$(locale -a | grep en_US)
-        - # if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
+        - if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
         - pip3 install -e .[doc]
         - rm -Rf build
         - python3 setup.py build_sphinx
