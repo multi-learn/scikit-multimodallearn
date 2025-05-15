@@ -179,7 +179,7 @@ def setup_package():
     keywords = ['machine learning, supervised learning, classification, ensemble methods, boosting, kernel']
     packages = find_packages(exclude=['*.tests'])
     setup_requires = ['numpy']
-    install_requires = ['scikit-learn==1.2.1', 'scipy', 'cvxopt' ]
+    install_requires = ['scikit-learn==1.2.1', 'numpy', 'scipy', 'cvxopt' ]
     python_requires = '>=3.6'
     extras_require = {
         'dev': ['pytest', 'pytest-cov'],
