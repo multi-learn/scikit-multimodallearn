@@ -143,60 +143,25 @@ def setup_package():
     version = get_version()
     multimodal_dir = 'multimodal'
     set_version(multimodal_dir, version)
-    description = 'A scikit-learn compatible package for multimodal Classifiers'
     here = os.path.abspath(os.path.dirname(__file__))
-    open('README.rst').read(),  # Or 'README.rst', depending on your format
     long_description_content_type = 'text/x-rst'
     with open(os.path.join(here, 'README.rst'), encoding='utf-8') as readme:
         long_description = readme.read()
     group = 'dev'
-    url = 'https://gitlab.lis-lab.fr/{}/{}'.format(group, name)
-    project_urls = {
-        'Documentation': 'http://{}.pages.lis-lab.fr/{}'.format(group, name),
-        'Source': url,
-        'Tracker': '{}/issues'.format(url)}
-    author = 'Dominique Benielli and Sokol Koço and Florent Jaillet and Riikka Huusari ' \
-             'and Baptiste Bauvin and Cécile Capponi and Hachem Kadri'
-    author_email = 'contact.dev@lis-lab.fr'
-    license = 'BSD-3-Clause'
-    classifiers=[
-        'Development Status :: 5 - Production/Stable',
-        'Intended Audience :: Science/Research',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3.9',
-         'Topic :: Scientific/Engineering',
-         'Topic :: Scientific/Engineering :: Artificial Intelligence',
-         'Operating System :: Microsoft :: Windows',
-         'Operating System :: POSIX :: Linux',
-          'Operating System :: MacOS :: MacOS X',
-         ]
-    keywords = ['machine learning, supervised learning, classification, ensemble methods, boosting, kernel']
+    # url = 'https://gitlab.lis-lab.fr/{}/{}'.format(group, name)
+    # project_urls = {
+    #    'Documentation': 'http://{}.pages.lis-lab.fr/{}'.format(group, name),
+    #    'Source': url,
+    #   'Tracker': '{}/issues'.format(url)}
     packages = find_packages(exclude=['*.tests'])
-    install_requires = ['scikit-learn==1.2.1', 'numpy', 'scipy', 'cvxopt' ]
-    extras_require = {
-        'dev': ['pytest', 'pytest-cov'],
-        'doc': ['sphinx==5.0', 'numpydoc', 'sphinx_gallery', 'matplotlib', "sphinx_rtd_theme"]}
     include_package_data = True
-    # python_requires=python_requires,
+    # python_requires=python_requires, description=description,author=author,
+    # classifiers=classifiers, keywords=keywords, install_requires=install_requires,
     setup(
           version=version,
-          description=description,
           long_description=long_description,
           long_description_content_type=long_description_content_type,
-          url=url,
-          project_urls=project_urls,
-          author=author,
-          author_email=author_email,
-          license=license,
-          license_files = ['license.txt'],
-          classifiers=classifiers,
-          keywords=keywords,
           packages=packages,
-          install_requires=install_requires,
-          extras_require=extras_require,
           include_package_data=include_package_data)
 
 

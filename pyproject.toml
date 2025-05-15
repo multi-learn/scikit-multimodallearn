@@ -4,12 +4,50 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = 'scikit-multimodallearn'
-dynamic = ["version", "readme"]
+dynamic = ["version", "dependencies"]
 requires-python = '>=3.6'
+
+license = 'BSD-3-Clause'
+license-files = ['license.txt']
+readme = {file = "README.rst", content-type = "text/x-rst"}
+description = 'A scikit-learn compatible package for multimodal Classifiers'
+authors = [
+    {name = "Dominique Benielli" , email = "dominique.benielli@univ-amu.fr"},
+    {name = "Sokol Koço" },
+    {name = "Florent Jaillet"},
+    {name = "Riikka Huusari"},
+    {name = "Cécile Capponi"},
+    {name = "Baptiste Bauvin"},
+    {name = "Hachem Kadri'"}
+]
+classifiers=[
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Science/Research',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Topic :: Scientific/Engineering',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: MacOS :: MacOS X',
+]
+keywords = ['machine learning, supervised learning, classification, ensemble methods, boosting, kernel']
+
+[project.optional-dependencies]
+test = ['pytest', 'coverage==4.5.3', 'pytest-cov']
+dev = ['sphinx==5.0', 'numpydoc', 'sphinx_gallery', 'matplotlib', "sphinx_rtd_theme"]
+
+[project.urls]
+Homepage = 'https://github.com/multi-learn/scikit-multimodallearn'
+Documentation  = 'https://multi-learn.github.io/scikit-multimodallearn/'
+Issues = '"https://github.com/multi-learn/scikit-multimodallearn/issues'
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
 
 [tool.setuptools.packages.find]
 where = ["."]
 
-[tool.setuptools.dynamic]
-version = {attr = "multimodal.__version__"}
-readme = {file = ["README.rst"]}
