@@ -196,7 +196,7 @@ def setup_package():
           author=author,
           author_email=author_email,
           license=license,
-          license_files = ['lisence.txt'],
+          license_files = ['license.txt'],
           classifiers=classifiers,
           keywords=keywords,
           packages=packages,
