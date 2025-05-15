@@ -166,7 +166,7 @@ def setup_package():
           long_description=long_description,
           long_description_content_type=long_description_content_type,
           packages=packages,
-          include_package_data=include_package_data
+          include_package_data=include_package_data,
           extras_require=extras_require)
 
 
