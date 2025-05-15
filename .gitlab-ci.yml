@@ -5,7 +5,7 @@ tests:
         - docker
     script:
         - if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
-        - pip install -e .[test]
+        - pip3 install -e .[test]
         - pytest-3
     coverage: '/^TOTAL.+?(\d+\%)$/'
     artifacts:
