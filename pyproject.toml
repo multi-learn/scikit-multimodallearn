@@ -38,7 +38,7 @@ keywords = ['machine learning, supervised learning, classification, ensemble met
 
 [project.optional-dependencies]
 test = ['pytest', 'coverage==4.5.3', 'pytest-cov']
-dev = ['sphinx==5.0', 'numpydoc', 'sphinx_gallery', 'matplotlib', "sphinx_rtd_theme"]
+doc = ['sphinx==5.0', 'numpydoc', 'sphinx_gallery', 'matplotlib', "sphinx_rtd_theme"]
 
 [project.urls]
 Homepage = 'https://github.com/multi-learn/scikit-multimodallearn'
