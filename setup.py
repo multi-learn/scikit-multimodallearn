@@ -160,6 +160,8 @@ def setup_package():
     # python_requires=python_requires, description=description,author=author,
     # classifiers=classifiers, keywords=keywords, install_requires=install_requires,
     setup(version=version,
+           license="BSD-3-Clause",
+           license_files="LICENSE",
           long_description=long_description,
           long_description_content_type=long_description_content_type,
           packages=packages,
