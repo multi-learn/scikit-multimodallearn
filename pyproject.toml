@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools >= 77.0.3", "wheel", "numpy"]
+requires = ["setuptools >= 77.0.3", "setuptools-scm", "wheel", "numpy"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = 'scikit-multimodallearn'
-dynamic = ["version", "dependencies"]
+dynamic = ["version", "dependencies", ]
 requires-python = '>=3.6'
 
 license = "BSD-3-Clause"
@@ -45,12 +45,11 @@ doc = ["sphinx==5.0", "numpydoc", "sphinx_gallery", "matplotlib", "sphinx_rtd_th
 Documentation  = "https://multi-learn.github.io/scikit-multimodallearn/"
 "Bug Tracker" = "https://github.com/multi-learn/scikit-multimodallearn/issues"
 
-[tool.setuptools]
 
-license-files = ["LICENSE", "copyrightstamp.txt"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
+
 
 
 [tool.setuptools.packages.find]

@@ -157,11 +157,9 @@ def setup_package():
     extras_require = {
         'test': ["pytest", "pytest-cov"],
         'doc': ["sphinx==5.0", "numpydoc", "sphinx_gallery", "matplotlib", "sphinx_rtd_theme"]}
-
     # python_requires=python_requires, description=description,author=author,
     # classifiers=classifiers, keywords=keywords, install_requires=install_requires,
-    setup(
-          version=version,
+    setup(version=version,
           long_description=long_description,
           long_description_content_type=long_description_content_type,
           packages=packages,
