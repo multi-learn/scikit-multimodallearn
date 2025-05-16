@@ -70,9 +70,11 @@ def getVersionsAndDate():
 def writeStamp():
     """ Write a copyright stamp on all files """
     stamp = getStamp(*getVersionsAndDate())
+    print("stamp", stamp)
     files = findFiles(os.path.join(os.path.dirname(os.path.abspath(__file__)),
                                    "multimodal"))
     for filename in files:
+        print("filename", filename)
         fileStamping(filename, stamp)
     fileStamping("setup.py", stamp)
 

@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # ######### COPYRIGHT #########
 #
-# Copyright(c) 2020
+# Copyright(c) 2025
 # -----------------
 #
 # * Université d'Aix Marseille (AMU) -
 # * Centre National de la Recherche Scientifique (CNRS) -
 # * Université de Toulon (UTLN).
-# * Copyright © 2019-2020 AMU, CNRS, UTLN
+# * Copyright © 2019-2025 AMU, CNRS, UTLN
 #
 # Contributors:
 # ------------
@@ -30,7 +30,7 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.dev0
+# * multimodal version = 0.0.3
 #
 # Licence:
 # -------
@@ -39,6 +39,8 @@
 #
 #
 # ######### COPYRIGHT #########
+#
+#
 r"""
 
 This module contains a **Mu**\ lti\ **C**\ onfusion **M**\ Matrix **B**\ osting (**CoMBo**)

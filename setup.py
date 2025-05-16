@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # ######### COPYRIGHT #########
 #
-# Copyright(c) 2020
+# Copyright(c) 2025
 # -----------------
 #
 # * Université d'Aix Marseille (AMU) -
 # * Centre National de la Recherche Scientifique (CNRS) -
 # * Université de Toulon (UTLN).
-# * Copyright © 2019-2020 AMU, CNRS, UTLN
+# * Copyright © 2019-2025 AMU, CNRS, UTLN
 #
 # Contributors:
 # ------------
@@ -30,9 +30,9 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.dev0
+# * multimodal version = 0.0.3
 #
-# Licence:(
+# Licence:
 # -------
 #
 # License: New BSD License
@@ -61,7 +61,7 @@ try:
     from copyright import writeStamp, eraseStamp
 except ImportError:
     USE_COPYRIGHT = False
-
+print(USE_COPYRIGHT)
 ###################
 # Get Multimodal version
 ####################
@@ -128,7 +128,6 @@ class m_sdist(sdist):
 
     WARNING : The stamping must be done on an default utf8 machine !
     """
-
     def run(self):
         if USE_COPYRIGHT:
             writeStamp()

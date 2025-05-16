@@ -6,7 +6,7 @@ Copyright(c) DATE
 * Université d'Aix Marseille (AMU) -
 * Centre National de la Recherche Scientifique (CNRS) -
 * Université de Toulon (UTLN).
-* Copyright © 2019-2020 AMU, CNRS, UTLN
+* Copyright © 2019-2025 AMU, CNRS, UTLN
 
 Contributors:
 ------------
@@ -35,6 +35,5 @@ Licence:
 -------
 
 License: New BSD License
-
 
 ######### COPYRIGHT #########

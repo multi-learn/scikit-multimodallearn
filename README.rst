@@ -62,6 +62,10 @@ You can get the **source code** from the **Git** repository of the project::
 
   git clone git@gitlab.lis-lab.fr:dev/scikit-multimodallearn.git
 
+or
+
+  git clone git@github.com:multi-learn/scikit-multimodallearn.git
+
 Testing
 ~~~~~~~
 
