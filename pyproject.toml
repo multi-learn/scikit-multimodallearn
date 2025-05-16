@@ -7,7 +7,7 @@ name = 'scikit-multimodallearn'
 dynamic = ["version", "dependencies"]
 requires-python = '>=3.6'
 
-license = {text = "BSD-3-Clause"}
+license = {"BSD-3-Clause"}
 license-files = ["license.txt"]
 readme = {file = "README.rst", content-type = "text/x-rst"}
 description = 'A scikit-learn compatible package for multimodal Classifiers'
