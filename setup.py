@@ -61,7 +61,7 @@ try:
     from copyright import writeStamp, eraseStamp
 except ImportError:
     USE_COPYRIGHT = False
-print(USE_COPYRIGHT)
+
 ###################
 # Get Multimodal version
 ####################
