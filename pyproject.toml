@@ -4,10 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = 'scikit-multimodallearn'
-dynamic = ["version", "dependencies", ]
+dynamic = ["version", "dependencies"]
 requires-python = '>=3.6'
-
-license = {'text' = "BSD-3-Clause"}
 
 readme = {file = "README.rst", content-type = "text/x-rst"}
 description = 'A scikit-learn compatible package for multimodal Classifiers'
@@ -28,6 +26,7 @@ classifiers=[
     'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
+    'License :: OSI Approved :: BSD License',
     'Topic :: Scientific/Engineering',
     'Topic :: Scientific/Engineering :: Artificial Intelligence',
     'Operating System :: Microsoft :: Windows',
@@ -45,15 +44,12 @@ doc = ["sphinx==5.0", "numpydoc", "sphinx_gallery", "matplotlib", "sphinx_rtd_th
 Documentation  = "https://multi-learn.github.io/scikit-multimodallearn/"
 "Bug Tracker" = "https://github.com/multi-learn/scikit-multimodallearn/issues"
 
-[tool.setuptools]
-license-files = ["LICENSE"]
+
 
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 
 
-
 [tool.setuptools.packages.find]
 where = ["."]
-

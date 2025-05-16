@@ -156,18 +156,3 @@ References
 * Riikka Huusari, Hachem Kadri and Cécile Capponi,
   "Multi-View Metric Learning in Vector-Valued Kernel Spaces"
   in International Conference on Artificial Intelligence and Statistics (AISTATS) 2018
-
-Copyright
-~~~~~~~~~
-
-Université d'Aix Marseille (AMU) -
-Centre National de la Recherche Scientifique (CNRS) -
-Université de Toulon (UTLN).
-
-Copyright © 2017-2018 AMU, CNRS, UTLN
-
-License
-~~~~~~~
-
-**scikit-multimodallearn** is free software: you can redistribute it and/or modify
-it under the terms of the **New BSD License**
