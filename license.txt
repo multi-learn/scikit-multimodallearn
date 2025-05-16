@@ -1,4 +1,4 @@
-New BSD License
+New BSD License   :  BSD-3-Clause
 
 Copyright (c) 2025-15-04, The scikit-multimodallearn developers.
 All rights reserved.
