@@ -8,7 +8,6 @@ dynamic = ["version", "dependencies"]
 requires-python = '>=3.6'
 
 license = "BSD-3-Clause"
-license-files = ["license.txt"]
 readme = {file = "README.rst", content-type = "text/x-rst"}
 description = 'A scikit-learn compatible package for multimodal Classifiers'
 authors = [
@@ -45,8 +44,12 @@ doc = ["sphinx==5.0", "numpydoc", "sphinx_gallery", "matplotlib", "sphinx_rtd_th
 Documentation  = "https://multi-learn.github.io/scikit-multimodallearn/"
 "Bug Tracker" = "https://github.com/multi-learn/scikit-multimodallearn/issues"
 
+[tool.setuptools]
+license-files = ["license.txt"]
+
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
+
 
 [tool.setuptools.packages.find]
 where = ["."]
