@@ -275,14 +275,14 @@ class MultiModalSparseArray(sp.csr_matrix, sp.csc_matrix, MultiModalSparseInfo, 
         """Constructor of Metriclearn_array"""
         if sp.issparse(arg[0]):
             MultiModalSparseInfo.__init__(self, *arg)
-            if isinstance(arg[0], sp.csr_matrix) :
+            if isinstance(arg[0], sp.csr_matrix) or isinstance(arg[0], sp.csr_array):
                 sp.csr_matrix.__init__(self, arg[0])
-            elif isinstance(arg[0], sp.csc_matrix):
+            elif isinstance(arg[0], sp.csc_matrix) or isinstance(arg[0], sp.csr_array):
                 sp.csc_matrix.__init__(self, arg[0])
             else:
                 raise TypeError("This sparse format is not supported")
         else:
-            if isinstance(self,sp.csr_matrix):
+            if isinstance(self, sp.csr_matrix):
                sp.csr_matrix.__init__(self, *arg, **kwargs)
             elif isinstance(self, sp.csc_matrix):
                sp.csc_matrix.__init__(self, *arg, **kwargs)

@@ -46,6 +46,7 @@ from abc import ABCMeta
 from sklearn.utils import check_array, check_X_y, check_random_state
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import BaseDecisionTree
+from sklearn.base import BaseEstimator
 from sklearn.tree._tree import DTYPE
 from sklearn.base import clone
 from sklearn.ensemble._base import _set_random_states
@@ -55,7 +56,7 @@ from multimodal.datasets.data_sample import DataSample
 from multimodal.datasets.data_sample import MultiModalData, MultiModalArray, MultiModalSparseArray
 
 
-class UBoosting(metaclass=ABCMeta):
+class UBoosting(BaseEstimator, metaclass=ABCMeta):
     """
     Abstract class MuComboClassifier and  MumboClassifier should inherit from
     UBoosting for methods
@@ -74,6 +75,15 @@ class UBoosting(metaclass=ABCMeta):
         if append:
             self.estimators_.append(estimator)
         return estimator
+
+    def __sklearn_tags__(self):
+        tags = super().__sklearn_tags__()
+        tags.input_tags.sparse = True
+        return tags
+
+
+    def _more_tags(self):
+        return self.__sklearn_tags__()
 
     def _make_estimator_boost(self, append=True, random_state=None, ind_view=0):
         if type(self.estimator_) is list:
