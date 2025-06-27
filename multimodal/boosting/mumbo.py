@@ -401,7 +401,7 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         self.X_ = self._global_X_transform(X, views_ind=views_ind)
         views_ind_, n_views = self.X_._validate_views_ind(self.X_.views_ind,
                                                           self.X_.shape[1])
-        validate_data(self, self.X_, y, accept_sparse=accept_sparse, dtype=dtype)
+        validate_data(self, self.X_, y)
         # check_X_y(self.X_, y, accept_sparse=accept_sparse, dtype=dtype)
         if not isinstance(y, np.ndarray):
             y = np.asarray(y)
