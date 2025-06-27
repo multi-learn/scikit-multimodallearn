@@ -56,7 +56,7 @@ if __name__ == '__main__':
     XX =MultiModalArray(dic_digit)
     X_train, X_test, y_train, y_test = train_test_split(XX, y)
 
-    est2 = MumboClassifier(base_estimator=base_estimator).fit(X_train, y_train)
+    est2 = MumboClassifier(estimator=base_estimator).fit(X_train, y_train)
     y_pred2 = est2.predict(X_test)
     y_pred22 = est2.predict(X_train)
     print("result of MumboClassifier on digit ")

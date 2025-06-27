@@ -54,7 +54,7 @@ if __name__ == '__main__':
     dic_digit = load_dict(file)
     XX =MultiModalArray(dic_digit)
     X_train, X_test, y_train, y_test = train_test_split(XX, y)
-    est3 = MuComboClassifier(base_estimator=base_estimator).fit(X_train, y_train)
+    est3 = MuComboClassifier(estimator=base_estimator).fit(X_train, y_train)
     y_pred3 = est3.predict(X_test)
     y_pred33 = est3.predict(X_train)
     print("result of MuComboClassifier on digit ")
