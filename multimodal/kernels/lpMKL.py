@@ -30,13 +30,12 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.3
+# * multimodal version = 0.1.0
 #
 # Licence:
 # -------
 #
 # License: New BSD License
-#
 #
 # ######### COPYRIGHT #########
 #

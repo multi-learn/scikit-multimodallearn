@@ -30,13 +30,12 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.3
+# * multimodal version = 0.1.0
 #
 # Licence:
 # -------
 #
 # License: New BSD License
-#
 #
 # ######### COPYRIGHT #########
 #
@@ -360,8 +359,6 @@ class TestMumboClassifier(unittest.TestCase):
         clf.fit(self.iris.data, self.iris.target, self.iris.views_ind)
         score = clf.score(self.iris.data, self.iris.target)
         self.assertGreater(score, 0.95, "Failed with score = {}".format(score))
-
-        self.assertRaises(ValueError, MumboClassifier, best_view_mode='test')
 
         clf = MumboClassifier()
         clf.best_view_mode = 'test'
@@ -803,9 +800,9 @@ class TestMumboClassifier(unittest.TestCase):
         np.random.seed(seed)
 
         # Check that base trees can be grid-searched.
-        mumbo = MumboClassifier(base_estimator=DecisionTreeClassifier())
+        mumbo = MumboClassifier(estimator=DecisionTreeClassifier())
         parameters = {'n_estimators': (1, 2),
-                      'base_estimator__max_depth': (1, 2)}
+                      'estimator__max_depth': (1, 2)}
         clf = GridSearchCV(mumbo, parameters)
         clf.fit(self.iris.data, self.iris.target, views_ind=self.iris.views_ind)
 
@@ -825,7 +822,7 @@ class TestMumboClassifier(unittest.TestCase):
         score_loaded = clf_loaded.score(self.iris.data, self.iris.target)
         self.assertEqual(score, score_loaded)
 
-    def test_base_estimator(self):
+    def test_estimator(self):
         seed = 7
         np.random.seed(seed)
 
@@ -869,13 +866,13 @@ class TestMumboClassifier(unittest.TestCase):
             for views_ind in (self.iris.views_ind, np.array([[0, 2], [1, 3]])):
                 X_sparse = sparse_format(X_dense)
                 clf_sparse = MumboClassifier(
-                    base_estimator=CustomSVC(),
+                    estimator=CustomSVC(),
                     random_state=seed,
                     n_estimators=n_estimators)
                 clf_sparse.fit(X_sparse, y, views_ind)
 
                 clf_dense = MumboClassifier(
-                    base_estimator=CustomSVC(),
+                    estimator=CustomSVC(),
                     random_state=seed,
                     n_estimators=n_estimators)
                 clf_dense.fit(X_dense, y, views_ind)

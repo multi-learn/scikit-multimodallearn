@@ -30,22 +30,24 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.3
+# * multimodal version = 0.1.0
 #
 # Licence:
 # -------
 #
 # License: New BSD License
 #
-#
 # ######### COPYRIGHT #########
 import os, re
 import shutil
 from setuptools import setup, find_packages
-from distutils.command.clean import clean as _clean
-from distutils.dir_util import remove_tree
-from distutils.command.sdist import sdist
+#from distutils.command.clean import clean as _clean
+#from distutils.dir_util import remove_tree
+#from distutils.command.sdist import sdist
 
+from setuptools._distutils.dir_util import remove_tree
+from setuptools.command.sdist import sdist
+from setuptools import Command
 try:
     import numpy
 except:
@@ -100,25 +102,62 @@ def wselect(args, dirname, names):
 ######################
 # Custom clean command
 ######################
-class clean(_clean):
-    def walkAndClean(self):
-        os.walk("..", wselect, [])
+class CleanCommand(Command):
+    """Custom clean command to tidy up the project root."""
+    user_options = []
+
+    def initialize_options(self):
+        pass
+
+    def finalize_options(self):
         pass
 
     def run(self):
-        clean.run(self)
+        print("Running clean...")
+
+        # Clean build folder
         if os.path.exists('build'):
+            print("Removing build/")
             shutil.rmtree('build')
+
+        # Clean egg-info
+        if os.path.exists('scikit_multimodallearn.egg-info'):
+            print("Removing egg-info/")
+            shutil.rmtree('scikit_multimodallearn.egg-info')
+
+        # Clean compiled files in multimodal/
         for dirpath, dirnames, filenames in os.walk('multimodal'):
             for filename in filenames:
-                if (filename.endswith('.so') or
-                        filename.endswith('.pyd') or
-                        filename.endswith('.dll') or
-                        filename.endswith('.pyc')):
-                    os.unlink(os.path.join(dirpath, filename))
+                if filename.endswith(('.so', '.pyd', '.dll', '.pyc')):
+                    file_path = os.path.join(dirpath, filename)
+                    print(f"Removing file {file_path}")
+                    os.remove(file_path)
             for dirname in dirnames:
                 if dirname == '__pycache__':
-                    shutil.rmtree(os.path.join(dirpath, dirname))
+                    cache_path = os.path.join(dirpath, dirname)
+                    print(f"Removing {cache_path}")
+                    shutil.rmtree(cache_path)
+
+        print("Clean complete.")
+# class clean(_clean):
+#     def walkAndClean(self):
+#         os.walk("..", wselect, [])
+#         pass
+#
+#     def run(self):
+#         clean.run(self)
+#         if os.path.exists('build'):
+#             shutil.rmtree('build')
+#         for dirpath, dirnames, filenames in os.walk('multimodal'):
+#             for filename in filenames:
+#                 if (filename.endswith('.so') or
+#                         filename.endswith('.pyd') or
+#                         filename.endswith('.dll') or
+#                         filename.endswith('.pyc')):
+#                     os.unlink(os.path.join(dirpath, filename))
+#             for dirname in dirnames:
+#                 if dirname == '__pycache__':
+#                     shutil.rmtree(os.path.join(dirpath, dirname))
 
 ##############################
 # Custom sdist command
@@ -160,8 +199,8 @@ def setup_package():
     # python_requires=python_requires, description=description,author=author,
     # classifiers=classifiers, keywords=keywords, install_requires=install_requires,
     setup(version=version,
-           license="BSD-3-Clause",
-           license_files="LICENSE",
+          license="BSD-3-Clause",
+          license_files="LICENSE",
           long_description=long_description,
           long_description_content_type=long_description_content_type,
           packages=packages,

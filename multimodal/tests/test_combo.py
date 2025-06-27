@@ -30,13 +30,12 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.3
+# * multimodal version = 0.1.0
 #
 # Licence:
 # -------
 #
 # License: New BSD License
-#
 #
 # ######### COPYRIGHT #########
 #
@@ -921,18 +920,18 @@ class TestMuComboClassifier(unittest.TestCase):
     #     np.random.seed(seed)
     #
     #     # Check that base trees can be grid-searched.
-        mumbo = MuComboClassifier(base_estimator=DecisionTreeClassifier())
+        mumbo = MuComboClassifier(estimator=DecisionTreeClassifier())
         parameters = {'n_estimators': (1, 2),
-                      'base_estimator__max_depth': (1, 2)}
+                      'estimator__max_depth': (1, 2)}
         clf = GridSearchCV(mumbo, parameters)
         clf.fit(self.iris.data, self.iris.target, views_ind=self.iris.views_ind)
-        self.assertEqual(clf.best_params_,{'base_estimator__max_depth': 2, 'n_estimators': 2})
+        self.assertEqual(clf.best_params_,{'estimator__max_depth': 2, 'n_estimators': 2})
 
         multimodal_data = MultiModalArray(self.iris.data, views_ind=self.iris.views_ind)
         clf = GridSearchCV(mumbo, parameters)
         clf.fit(multimodal_data, self.iris.target)
 
-        self.assertEqual(clf.best_params_, {'base_estimator__max_depth': 2, 'n_estimators': 2})
+        self.assertEqual(clf.best_params_, {'estimator__max_depth': 2, 'n_estimators': 2})
 
     # def test_pick         le():
     #     np.random.seed(seed)
@@ -950,7 +949,7 @@ class TestMuComboClassifier(unittest.TestCase):
     #     assert_equal(score, score_loaded)
     #
     #
-    def test_base_estimator_score(self):
+    def test_estimator_score(self):
     #     np.random.seed(seed)
     #
         """ Test different base estimators."""
@@ -997,13 +996,13 @@ class TestMuComboClassifier(unittest.TestCase):
     #             X_sparse = sparse_format(X_dense)
     #
     #             clf_sparse = MuComboClassifier(
-    #                 base_estimator=CustomSVC(),
+    #                 estimator=CustomSVC(),
     #                 random_state=seed,
     #                 n_estimators=n_estimators)
     #             clf_sparse.fit(X_sparse, y, views_ind)
     #
     #             clf_dense = MuComboClassifier(
-    #                 base_estimator=CustomSVC(),
+    #                 estimator=CustomSVC(),
     #                 random_state=seed,
     #                 n_estimators=n_estimators)
     #             clf_dense.fit(X_dense, y, views_ind)

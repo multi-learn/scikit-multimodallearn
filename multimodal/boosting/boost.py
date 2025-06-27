@@ -30,13 +30,12 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.3
+# * multimodal version = 0.1.0
 #
 # Licence:
 # -------
 #
 # License: New BSD License
-#
 #
 # ######### COPYRIGHT #########
 #
@@ -62,59 +61,63 @@ class UBoosting(metaclass=ABCMeta):
     UBoosting for methods
     """
 
-    def _make_unique_estimator(self, base_estimator, estimator_params, append=True, random_state=None, ):
+    def _make_unique_estimator(self, estimator, estimator_params, append=True, random_state=None, ):
         # Copy/Paste of sklearn.ensebmle.BaseEnsemble._make_estimator
-        estimator = clone(base_estimator)
-        estimator.set_params(**{p: getattr(self, p)
+        if estimator is not None:
+            estimator = clone(estimator)
+            estimator.set_params(**{p: getattr(self, p)
                                 for p in estimator_params})
-
         if random_state is not None:
             _set_random_states(estimator, random_state)
-
         if append:
             self.estimators_.append(estimator)
-
         return estimator
 
-    def _make_estimator(self, append=True, random_state=None, ind_view=0):
-        if type(self.base_estimator_) is list:
-            return self._make_unique_estimator(self.base_estimator[ind_view], self.estimator_params[ind_view], append=append, random_state=random_state)
-
+    def _make_estimator_boost(self, append=True, random_state=None, ind_view=0):
+        if type(self.estimator_) is list:
+            return self._make_unique_estimator(self.estimator[ind_view], self.estimator_params[ind_view], append=append, random_state=random_state)
         else:
-            return self._make_unique_estimator(self.base_estimator, self.estimator_params, append=append, random_state=random_state)
+            return self._make_unique_estimator(self.estimator, self.estimator_params, append=append, random_state=random_state)
 
     def _validate_X_predict(self, X):
         """Ensure that X is in the proper format."""
+
         if X.ndim < 2:
             X = X[np.newaxis, :]
-            if X.shape[1] != self.n_features_:
-                raise ValueError("Number of features of the model must "
-                                    "match the input. Model n_features is %s and "
-                                     "input n_features is %s " % (self.n_features_, X.shape[1]))
+            if X.shape[1] != self.n_features_in_:
+                #raise ValueError("Number of features of the model must "
+                #                    "match the input. Model n_features is %s and "
+                #                     "input n_features is %s " % (self.n_features_in_, X.shape[1]))
+                ValueError(
+                    f"X has {X.shape[1]} features, but {self.__class__.__name__} "
+                    f"is expecting {self.n_features_in_} features as input.")
+
             else:
                 mes = "Reshape your data as a 2D-array "
                 raise ValueError(mes)
-        if (self.base_estimator is None or
-                isinstance(self.base_estimator,
+        if (self.estimator is None or
+                isinstance(self.estimator,
                            (BaseDecisionTree, BaseForest))):
             check_array(X, accept_sparse='csr', dtype=DTYPE)
 
         else:
             check_array(X, accept_sparse=['csr', 'csc'])
         if X.ndim > 1:
-            if X.shape[1] != self.n_features_:
-                if X.shape[0] == self.n_features_ and X.shape[1] > 1:
+            if X.shape[1] != self.n_features_in_:
+                if X.shape[0] == self.n_features_in_ and X.shape[1] > 1:
                     raise ValueError("Reshape your data")
                 else:
-                    raise ValueError("Number of features of the model must "
-                                    "match the input. Model n_features is %s and "
-                                     "input n_features is %s " % (self.n_features_, X.shape[1]))
+                    raise ValueError( f"X has {X.shape[1]} features, but {self.__class__.__name__} "
+                    f"is expecting {self.n_features_in_} features as input.")
+                    #raise ValueError("Number of features of the model must "
+                    #                "match the input. Model n_features is %s and "
+                    #                 "input n_features is %s " % (self.n_features_in_, X.shape[1]))
         return X
 
     def _global_X_transform(self, X, views_ind=None):
         if isinstance(X, MultiModalData):
             X_ = X
-        elif isinstance(X, sp.spmatrix):
+        elif isinstance(X, sp.spmatrix) or isinstance(X, sp.sparray):
             X_ = MultiModalSparseArray(X, views_ind)
         else:
             X_ = MultiModalArray(X, views_ind)

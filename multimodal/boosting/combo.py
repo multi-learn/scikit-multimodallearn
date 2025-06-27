@@ -30,13 +30,12 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.3
+# * multimodal version = 0.1.0
 #
 # Licence:
 # -------
 #
 # License: New BSD License
-#
 #
 # ######### COPYRIGHT #########
 #
@@ -50,12 +49,15 @@ estimator for classification implemented in the ``MuComboClassifier`` class.
 import numpy as np
 from sklearn.base import ClassifierMixin
 from sklearn.ensemble import BaseEnsemble
+from sklearn.base import clone
+from sklearn.ensemble._base import _set_random_states
 from sklearn.ensemble._forest import BaseForest
 from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree._tree import DTYPE
 from sklearn.tree import BaseDecisionTree
 from sklearn.utils import check_X_y, check_random_state
+from sklearn.utils.validation import validate_data
 from sklearn.utils.multiclass import check_classification_targets
 from sklearn.utils.validation import check_is_fitted, has_fit_parameter
 from cvxopt import solvers, matrix, spdiag, exp, spmatrix, mul, div
@@ -63,7 +65,7 @@ from .boost import UBoosting
 import warnings
 
 
-class MuComboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
+class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
     r"""It then iterates the process on the same dataset but where the weights of
     incorrectly classified instances are adjusted such that subsequent
     classifiers focus more on difficult cases.
@@ -79,7 +81,7 @@ class MuComboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
 
     Parameters
     ----------
-    base_estimator : object, optional (default=DecisionTreeClassifier)
+    estimator : object, optional (default=DecisionTreeClassifier)
         Base estimator from which the boosted ensemble is built.
         Support for sample weighting is required, as well as proper `classes_`
         and `n_classes_` attributes. The default is a DecisionTreeClassifier
@@ -140,10 +142,10 @@ class MuComboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
     [0]
 
     >>> from sklearn.tree import DecisionTreeClassifier
-    >>> base_estimator = DecisionTreeClassifier(max_depth=2)
-    >>> clf = MuComboClassifier(base_estimator=base_estimator, random_state=1)
+    >>> estimator = DecisionTreeClassifier(max_depth=2)
+    >>> clf = MuComboClassifier(estimator=estimator, random_state=1)
     >>> clf.fit(X, y, views_ind)  # doctest: +NORMALIZE_WHITESPACE
-    MuComboClassifier(base_estimator=DecisionTreeClassifier(max_depth=2),
+    MuComboClassifier(estimator=DecisionTreeClassifier(max_depth=2),
                       random_state=1)
     >>> print(clf.predict([[ 5.,  3.,  1.,  1.]]))
     [0]
@@ -171,22 +173,38 @@ class MuComboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
     """
 
     def __init__(self,
-                 base_estimator=None,
+                 estimator=None,
                  n_estimators=50,
                  random_state=None): # n_estimators=50,
-        super(MuComboClassifier, self).__init__(
-            base_estimator=base_estimator,
+        BaseEnsemble.__init__(self,
+            estimator=estimator,
             n_estimators=n_estimators)
         self.random_state = random_state
 
+    def _make_estimator(self, append=True, random_state=None, ind_view=0):
+        if type(self.estimator_) is list:
+            estimator = clone(self.estimator_[ind_view])
+            estimator.set_params(**{p: getattr(self, p)
+                                    for p in self.estimator_params[ind_view]})
+            # TODO : modify estimator_params to be able to set a list
+
+            if random_state is not None:
+                _set_random_states(estimator, random_state)
+            if append:
+                self.estimators_.append(estimator)
+            return estimator
+        else:
+            return super(MuComboClassifier, self)._make_estimator(append=append,
+                random_state=random_state)
+
     def _validate_estimator(self):
-        """Check the estimator and set the base_estimator_ attribute."""
+        """Check the estimator and set the estimator_ attribute."""
         super(MuComboClassifier, self)._validate_estimator(
             default=DecisionTreeClassifier(max_depth=1))
 
-        if not has_fit_parameter(self.base_estimator_, "sample_weight"):
+        if not has_fit_parameter(self.estimator_, "sample_weight"):
             raise ValueError("%s doesn't support sample_weight."
-                             % self.base_estimator_.__class__.__name__)
+                             % self.estimator_.__class__.__name__)
 
     def _init_var(self, n_views, y):
         "Create and initialize the variables used by the MuMBo algorithm."
@@ -424,8 +442,8 @@ class MuComboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
         ValueError where `X` and `view_ind` are not compatibles
         """
         warnings.filterwarnings("ignore", category=RuntimeWarning)
-        if (self.base_estimator is None or
-                isinstance(self.base_estimator, (BaseDecisionTree,
+        if (self.estimator is None or
+                isinstance(self.estimator, (BaseDecisionTree,
                                                  BaseForest))):
             dtype = DTYPE
             accept_sparse = 'csc'
@@ -435,7 +453,8 @@ class MuComboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
         self.X_ = self._global_X_transform(X, views_ind=views_ind)
         views_ind_, n_views = self.X_._validate_views_ind(self.X_.views_ind,
                                                           self.X_.shape[1])
-        check_X_y(self.X_, y)
+        validate_data(self, self.X_, y)
+        #check_X_y(self.X_, y)
         if not isinstance(y, np.ndarray):
             y = np.asarray(y)
         check_classification_targets(y)
@@ -446,7 +465,7 @@ class MuComboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
         self.n_classes_ = len(self.classes_)
         self.n_views_ = n_views
         self.n_features_ = self.X_.shape[1]
-        self.n_features_in_ = self.n_features_ 
+        self.n_features_in_ = self.n_features_
         if self.n_classes_ == 1:
             # This case would lead to division by 0 when computing the cost
             # matrix so it needs special handling (but it is an obvious case as

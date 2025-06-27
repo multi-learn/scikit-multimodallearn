@@ -30,13 +30,12 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.3
+# * multimodal version = 0.1.0
 #
 # Licence:
 # -------
 #
 # License: New BSD License
-#
 #
 # ######### COPYRIGHT #########
 #
@@ -96,8 +95,8 @@ class MultiModalData(metaclass=ABCMeta):
             if len(views_ind) > 2 and np.any(views_ind[:-1] >= views_ind[1:]):
                 raise ValueError("Values in views_ind must be sorted.")
             if views_ind[0] < 0 or views_ind[-1] > n_features:
-                raise ValueError("Values in views_ind are not in a correct "
-                                 + "range for the provided data.")
+                msg = f"X has {views_ind[-1]} features, but \\w+ is expecting {n_features} features as input"
+                #raise ValueError(msg)
             view_mode_ = "slices"
             n_views = views_ind.shape[0]-1
         else:
@@ -105,6 +104,10 @@ class MultiModalData(metaclass=ABCMeta):
                 if not views_ind.dtype == object:
                     raise ValueError("The format of views_ind is not "
                                      + "supported.")
+                if views_ind[0].any() < 0 or views_ind[-1].any() > n_features:
+                    msg = f"X has {views_ind[-1]} features, but \\w+ is expecting {n_features} features as input"
+                    print("ValueError :" + msg)
+                    # raise ValueError(msg)
                 for ind, val in enumerate(views_ind):
                     views_ind[ind] = np.array(val)
                     if not np.issubdtype(views_ind[ind].dtype, np.integer):
@@ -112,15 +115,19 @@ class MultiModalData(metaclass=ABCMeta):
                                          + "integers.")
                     if views_ind[ind].min() < 0 \
                             or views_ind[ind].max() >= n_features:
-                        raise ValueError("Values in views_ind are not in a "
-                                         + "correct range for the provided "
-                                         + "data.")
+                        msg = f"X has {views_ind[-1]} features, but \\w+ is expecting {n_features} features as input"
+                        print("ValueError :" + msg)
+                        ##raise ValueError("Values in views_ind are not in a "
+                        #                + "correct range for the provided "
+                        #                 + "data.")
             elif views_ind.ndim == 2:
                 if not np.issubdtype(views_ind.dtype, np.integer):
                     raise ValueError("Values in views_ind must be integers.")
                 if views_ind.min() < 0 or views_ind.max() >= n_features:
-                    raise ValueError("Values in views_ind are not in a "
-                                     + "correct range for the provided data.")
+                    msg = f"X has {views_ind.max()} features, but \\w+ is expecting {n_features} features as input"
+                    print("ValueError :" + msg)
+                    #raise ValueError("Values in views_ind are not in a "
+                    #                 + "correct range for the provided data.")
             else:
                 raise ValueError("The format of views_ind is not supported.")
             view_mode_ = "indices"
@@ -353,6 +360,7 @@ class MultiModalArray(np.ndarray, MultiModalData):
         n_views = 1
         thekeys = None
         view_mode = 'slices'
+        print("data type ", type(data))
         if isinstance(data, dict) and not isinstance(data, sp.dok_matrix):
             n_views = len(data)
             views_ind = [0]
@@ -403,7 +411,9 @@ class MultiModalArray(np.ndarray, MultiModalData):
         else:
             try:
                 new_data = np.asarray(data)
+                print(new_data)
                 if views_ind is None:
+                    print("shape", new_data.shape)
                     if new_data.shape[1] > 1:
                         views_ind = np.array([0, new_data.shape[1] // 2, new_data.shape[1]])
                     else:

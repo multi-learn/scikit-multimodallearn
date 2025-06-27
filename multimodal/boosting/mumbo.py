@@ -30,13 +30,12 @@
 # Version:
 # -------
 #
-# * multimodal version = 0.0.3
+# * multimodal version = 0.1.0
 #
 # Licence:
 # -------
 #
 # License: New BSD License
-#
 #
 # ######### COPYRIGHT #########
 #
@@ -57,12 +56,13 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import BaseDecisionTree
 from sklearn.tree._tree import DTYPE
 from sklearn.utils import check_array, check_X_y, check_random_state
+from sklearn.utils.validation import validate_data
 from sklearn.utils.multiclass import check_classification_targets
 from sklearn.utils.validation import check_is_fitted, has_fit_parameter
 from .boost import UBoosting
 
 
-class MumboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
+class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
     r"""It then iterates the process on the same dataset but where the weights of
     incorrectly classified instances are adjusted such that subsequent
     classifiers focus more on difficult cases.
@@ -78,7 +78,7 @@ class MumboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
 
     Parameters
     ----------
-    base_estimator : object, optional (default=DecisionTreeClassifier)
+    estimator : object, optional (default=DecisionTreeClassifier)
         Base estimator from which the boosted ensemble is built.
         Support for sample weighting is required, as well as proper `classes_`
         and `n_classes_` attributes. The default is a DecisionTreeClassifie  
@@ -141,10 +141,10 @@ class MumboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
     [1]
 
     >>> from sklearn.tree import DecisionTreeClassifier
-    >>> base_estimator = DecisionTreeClassifier(max_depth=2)
-    >>> clf = MumboClassifier(base_estimator=base_estimator, random_state=0)
+    >>> estimator = DecisionTreeClassifier(max_depth=2)
+    >>> clf = MumboClassifier(estimator=estimator, random_state=0)
     >>> clf.fit(X, y, views_ind)  # doctest: +NORMALIZE_WHITESPACE  
-    MumboClassifier(base_estimator=DecisionTreeClassifier(max_depth=2),
+    MumboClassifier(estimator=DecisionTreeClassifier(max_depth=2),
                     random_state=0)
     >>> print(clf.predict([[ 5.,  3.,  1.,  1.]]))
     [1]
@@ -163,42 +163,42 @@ class MumboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
     """
 
     def __init__(self,
-                 base_estimator=None,
+                 estimator=None,
                  n_estimators=50,
                  random_state=None,
                  best_view_mode="edge"):
 
-        if type(base_estimator) is list:
-            self.base_estimator = base_estimator
+        if type(estimator) is list:
+            self.estimator = estimator
             self.n_estimators = n_estimators
-            self.estimator_params = [tuple() for _ in base_estimator]
+            self.estimator_params = [tuple() for _ in estimator]
 
         else:
-            super(MumboClassifier, self).__init__(
-            base_estimator=base_estimator,
+            BaseEnsemble.__init__(self,
+            estimator=estimator,
             n_estimators=n_estimators)
 
         self.random_state = random_state
-        self.best_view_mode = self._validate_best_view_mode(best_view_mode)
+        self.best_view_mode = best_view_mode
 
     def _validate_estimator(self):
-        """Check the estimator and set the base_estimator_ attribute."""
+        """Check the estimator and set the estimator_ attribute."""
         super(MumboClassifier, self)._validate_estimator(
             default=DecisionTreeClassifier(max_depth=1))
-        if type(self.base_estimator_) is list:
-            for estimator in self.base_estimator_:
+        if type(self.estimator_) is list:
+            for estimator in self.estimator_:
                 if not has_fit_parameter(estimator, "sample_weight"):
                     raise ValueError("%s doesn't support sample_weight."
                                      % estimator.__class__.__name__)
 
         else:
-            if not has_fit_parameter(self.base_estimator_, "sample_weight"):
+            if not has_fit_parameter(self.estimator_, "sample_weight"):
                 raise ValueError("%s doesn't support sample_weight."
-                                 % self.base_estimator_.__class__.__name__)
+                                 % self.estimator_.__class__.__name__)
 
     def _make_estimator(self, append=True, random_state=None, ind_view=0):
-        if type(self.base_estimator_) is list:
-            estimator = clone(self.base_estimator_[ind_view])
+        if type(self.estimator_) is list:
+            estimator = clone(self.estimator_[ind_view])
             estimator.set_params(**{p: getattr(self, p)
                                     for p in self.estimator_params[ind_view]})
             # TODO : modify estimator_params to be able to set a list
@@ -390,15 +390,14 @@ class MumboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
         """
         self.best_view_mode = self._validate_best_view_mode(
             self.best_view_mode)
-        if (self.base_estimator is None or
-                isinstance(self.base_estimator, (BaseDecisionTree,
+        if (self.estimator is None or
+                isinstance(self.estimator, (BaseDecisionTree,
                                                  BaseForest))):
             dtype = DTYPE
             accept_sparse = 'csc'
         else:
             dtype = None
             accept_sparse = ['csr', 'csc']
-
         self.X_ = self._global_X_transform(X, views_ind=views_ind)
         views_ind_, n_views = self.X_._validate_views_ind(self.X_.views_ind,
                                                           self.X_.shape[1])
@@ -411,7 +410,7 @@ class MumboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
         self.classes_, y = np.unique(y, return_inverse=True)
         self.n_classes_ = len(self.classes_)
         self.n_features_ = self.X_.shape[1]
-        self.n_features_in_ = self.n_features_ 
+        self.n_features_in_ = self.n_features_
         if self.n_classes_ == 1:
             # This case would lead to division by 0 when computing the cost
             # matrix so it needs special handling (but it is an obvious case as
@@ -561,6 +560,7 @@ class MumboClassifier(BaseEnsemble, ClassifierMixin, UBoosting):
         check_is_fitted(self, ("estimators_", "estimator_weights_",
                                "n_classes_", "X_"))
         X = self._global_X_transform(X, views_ind=self.X_.views_ind)
+        validate_data(self, X, reset=False, accept_sparse=True)
         X = self._validate_X_predict(X)
 
         n_samples = X.shape[0]
