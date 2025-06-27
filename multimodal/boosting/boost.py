@@ -61,6 +61,8 @@ class UBoosting(metaclass=ABCMeta):
     UBoosting for methods
     """
 
+
+
     def _make_unique_estimator(self, estimator, estimator_params, append=True, random_state=None, ):
         # Copy/Paste of sklearn.ensebmle.BaseEnsemble._make_estimator
         if estimator is not None:

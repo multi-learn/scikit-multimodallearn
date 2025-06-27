@@ -592,6 +592,7 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         check_is_fitted(self, ("estimators_", "estimator_weights_alpha_","n_views_",
                                "estimator_weights_beta_", "n_classes_"))
         X = self._global_X_transform(X, views_ind=self.X_.views_ind)
+        validate_data(self, X, reset=False, accept_sparse=True)
         X = self._validate_X_predict(X)
 
         n_samples = X.shape[0]
