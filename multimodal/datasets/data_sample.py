@@ -360,7 +360,6 @@ class MultiModalArray(np.ndarray, MultiModalData):
         n_views = 1
         thekeys = None
         view_mode = 'slices'
-        print("data type ", type(data))
         if isinstance(data, dict) and not isinstance(data, sp.dok_matrix):
             n_views = len(data)
             views_ind = [0]
@@ -411,9 +410,7 @@ class MultiModalArray(np.ndarray, MultiModalData):
         else:
             try:
                 new_data = np.asarray(data)
-                print(new_data)
                 if views_ind is None:
-                    print("shape", new_data.shape)
                     if new_data.shape[1] > 1:
                         views_ind = np.array([0, new_data.shape[1] // 2, new_data.shape[1]])
                     else:

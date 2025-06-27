@@ -117,7 +117,7 @@ class UBoosting(metaclass=ABCMeta):
     def _global_X_transform(self, X, views_ind=None):
         if isinstance(X, MultiModalData):
             X_ = X
-        elif isinstance(X, sp.spmatrix) or isinstance(X, sp.sparray):
+        elif sp.issparse(X):
             X_ = MultiModalSparseArray(X, views_ind)
         else:
             X_ = MultiModalArray(X, views_ind)
