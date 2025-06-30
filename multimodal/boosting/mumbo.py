@@ -262,9 +262,11 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         dist = np.empty(cost.shape[:2], dtype=cost.dtype, order="C")
         # NOTE: In Sokol's PhD thesis, the formula for dist is mistakenly given
         # with a minus sign in section 2.2.2 page 31
-        y_idx = y[np.newaxis, :]  # (1, n_samples)
-        dist[:, :] = cost[:, np.arange(n_samples), y_idx[0]] \
-             / np.sum(cost[:, np.arange(n_samples), y_idx[0]], axis=1)[:, np.newaxis]
+        n_views, n_samples, n_classes = cost.shape
+        idx_views = np.arange(n_views)[:, np.newaxis]   # (n_views, 1)
+        idx_samples = np.arange(n_samples)              # (n_samples,)
+        idx_classes = y                                  # (n_samples,)
+        dist[:, :] = cost[idx_views, idx_samples , idx_classes] / np.sum(cost[idx_views, idx_samples , idx_classes], axis=1)[:, np.newaxis]
                 #dist[:, :] = cost[:, np.arange(n_samples), y] \
         #    / np.sum(cost[:, np.arange(n_samples), y], axis=1)[:, np.newaxis]
         return dist
