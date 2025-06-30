@@ -237,11 +237,10 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         dist = np.empty(cost.shape[:2], dtype=cost.dtype, order="C")
         # NOTE: In Sokol Koco's PhD thesis, the formula for dist is mistakenly given
         # with a minus sign in section 2.2.2 page 31
-        sum_cost = np.sum(cost[:, np.arange(n_samples), y], axis=1)[:, np.newaxis]
+        y_idx = y[np.newaxis, :]
+        sum_cost = np.sum(cost[:, np.arange(n_samples), y_idx[0]], axis=1)[:, np.newaxis]
         sum_cost[sum_cost==0] = 1
-        selected_cost = cost[:, np.arange(n_samples), y]  # (n_views, n_samples)
-        dist = selected_cost /  sum_cost
-        dist = np.ascontiguousarray(dist, dtype=np.float64)
+        dist[:,:] = cost[:, np.arange(n_samples), y_idx[0]]  /  sum_cost
         # dist[:, :] = cost[:, np.arange(n_samples), y] / sum_cost
         return dist
 
