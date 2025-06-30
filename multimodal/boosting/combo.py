@@ -241,6 +241,7 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         sum_cost[sum_cost==0] = 1
         selected_cost = cost[:, np.arange(n_samples), y]  # (n_views, n_samples)
         dist = selected_cost /  sum_cost
+        dist = np.ascontiguousarray(dist, dtype=np.float64)
         # dist[:, :] = cost[:, np.arange(n_samples), y] / sum_cost
         return dist
 
