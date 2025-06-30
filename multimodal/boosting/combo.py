@@ -239,7 +239,9 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         # with a minus sign in section 2.2.2 page 31
         sum_cost = np.sum(cost[:, np.arange(n_samples), y], axis=1)[:, np.newaxis]
         sum_cost[sum_cost==0] = 1
-        dist[:, :] = cost[:, np.arange(n_samples), y] / sum_cost
+        selected_cost = cost[:, np.arange(n_samples), y]  # (n_views, n_samples)
+        dist = selected_cost /  sum_cost
+        # dist[:, :] = cost[:, np.arange(n_samples), y] / sum_cost
         return dist
 
     def _indicatrice(self, predicted_classes, y_i):
