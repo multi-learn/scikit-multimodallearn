@@ -460,7 +460,7 @@ class MultiModalArray(np.ndarray, MultiModalData):
                 raise TypeError("input format is not supported")
             new_data = cls._populate_new_data(index, dat_values, new_data)
             views_ind[index + 1] = dat_values.shape[1] + views_ind[index]
-            shapes_int.append(dat_values.shape[1])
+            shapes_int.append(int(dat_values.shape[1]))
             index += 1
         return new_data, shapes_int, views_ind
 
