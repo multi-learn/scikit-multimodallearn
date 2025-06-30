@@ -207,7 +207,7 @@ class MultiModalSparseInfo():
         views_ind, n_views, view_mode = self._first_validate_views_ind(views_ind,
                                                                       data.shape[1])
         if views_ind.ndim == 1 and view_mode.startswith("slicing"):
-            shapes_int = [in2 - in1 for in1, in2 in zip(views_ind, views_ind[1:])]
+            shapes_int = [int(in2 - in1) for in1, in2 in zip(views_ind, views_ind[1:])]
 
         if data.shape[0] < 1 or data.shape[1] < 1:
             raise ValueError("input data shouldbe not empty")
