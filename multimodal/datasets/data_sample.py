@@ -368,7 +368,7 @@ class MultiModalArray(np.ndarray, MultiModalData):
                 if dat_values.ndim < 2:
                     dat_values = dat_values.reshape(1, dat_values.shape[0])
                 new_data = cls._populate_new_data(index, dat_values, new_data)
-                shapes_int.append(dat_values.shape[1])
+                shapes_int.append(int(dat_values.shape[1]))
                 views_ind.append(dat_values.shape[1] + views_ind[index])
                 index += 1
             thekeys = data.keys()
@@ -430,7 +430,7 @@ class MultiModalArray(np.ndarray, MultiModalData):
         views_ind, n_views, view_mode = cls._first_validate_views_ind(views_ind,
                                                                       new_data.shape[1])
         if views_ind.ndim == 1 and view_mode.startswith("slices"):
-            shapes_int = [in2 - in1 for in1, in2 in zip(views_ind, views_ind[1:])]
+            shapes_int = [int(in2 - in1) for in1, in2 in zip(views_ind, views_ind[1:])]
 
         if hasattr(new_data, "mask"):  # pragma: no cover
             obj = ma.masked_array(new_data.data, new_data.mask).view(cls)
