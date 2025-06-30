@@ -265,7 +265,7 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         n_views, n_samples, n_classes = cost.shape
         idx_views = np.arange(n_views)[:, None]    # (n_views, 1)
         idx_samples = np.arange(n_samples)[None, :] # (1, n_samples)
-        selected_cost = cost[idx_views, idx_samples, y[None, :]]  # (n_views, n_samples)
+        selected_cost = cost[idx_views, idx_samples, np.asarray(y).reshape(-1)[None, :]]  # (n_views, n_samples)
         dist[:, :] = selected_cost / selected_cost.sum(axis=1, keepdims=True)
         return dist
 

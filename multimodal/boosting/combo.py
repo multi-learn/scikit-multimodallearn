@@ -239,8 +239,8 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         # with a minus sign in section 2.2.2 page 31
         n_views, n_samples, n_classes = cost.shape
         idx_views = np.arange(n_views)[:, np.newaxis]   # (n_views, 1)
-        idx_samples = np.arange(n_samples)              # (n_samples,)
-        idx_classes = y
+        idx_samples = np.arange(n_samples)[None, :]          # (n_samples,)
+        idx_classes = np.asarray(y).reshape(-1)[None, :]
         sum_cost = np.sum(cost[idx_views, idx_samples , idx_classes], axis=1)[:, np.newaxis]
         sum_cost[sum_cost==0] = 1
         dist[:,:] = cost[idx_views, idx_samples , idx_classes]  /  sum_cost
