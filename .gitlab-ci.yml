@@ -6,6 +6,7 @@ tests:
     script:
         - pip3 install --upgrade setuptools wheel
         - if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
+        - pip install "numpy>=1.22,<1.26" "scipy>=1.8,<1.12"
         - pip3 install -e .
         - pip3 install -e .[test]
         - pytest-3
