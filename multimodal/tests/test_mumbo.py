@@ -730,7 +730,7 @@ class TestMumboClassifier(unittest.TestCase):
         # e = MumboClassifier()
         # e.fit(X_zero_features, y)
         # print(e.predict(X_zero_features))
-        return check_estimator(MumboClassifier())
+        check_estimator(MumboClassifier())
 
     def test_iris(self):
         # Check consistency on dataset iris.

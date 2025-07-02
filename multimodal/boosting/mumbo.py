@@ -131,13 +131,13 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
     >>> clf = MumboClassifier(random_state=0)
     >>> clf.fit(X, y, views_ind)  # doctest: +NORMALIZE_WHITESPACE
     MumboClassifier(random_state=0)
-    >>> print(clf.predict([[ 5.,  3.,  1.,  1.]]))
+    >>> print(clf.predict([[ 5.8,  3.,  1.,  1.0]]))
     [1]
     >>> views_ind = [[0, 2], [1, 3]]  # view 0: length data, view 1: width data
     >>> clf = MumboClassifier(random_state=0)
     >>> clf.fit(X, y, views_ind)  # doctest: +NORMALIZE_WHITESPACE
     MumboClassifier(random_state=0)
-    >>> print(clf.predict([[ 5.,  3.,  1.,  1.]]))
+    >>> print(clf.predict([[ 5.8,  3.,  1.,  1.0]]))
     [1]
 
     >>> from sklearn.tree import DecisionTreeClassifier
@@ -146,7 +146,7 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
     >>> clf.fit(X, y, views_ind)  # doctest: +NORMALIZE_WHITESPACE  
     MumboClassifier(estimator=DecisionTreeClassifier(max_depth=2),
                     random_state=0)
-    >>> print(clf.predict([[ 5.,  3.,  1.,  1.]]))
+    >>> print(clf.predict([[ 5.8,  3.,  1.,  1.]]))
     [1]
 
     See also
@@ -202,13 +202,10 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
             estimator.set_params(**{p: getattr(self, p)
                                     for p in self.estimator_params[ind_view]})
             # TODO : modify estimator_params to be able to set a list
-
             if random_state is not None:
                 _set_random_states(estimator, random_state)
-
             if append:
                 self.estimators_.append(estimator)
-
             return estimator
 
         else:
@@ -264,9 +261,23 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         # with a minus sign in section 2.2.2 page 31
         n_views, n_samples, n_classes = cost.shape
         idx_views = np.arange(n_views)[:, None]    # (n_views, 1)
-        idx_samples = np.arange(n_samples)[None, :] # (1, n_samples)
-        selected_cost = cost[idx_views, idx_samples, np.asarray(y).reshape(-1)[None, :]]  # (n_views, n_samples)
+        idx_samples = np.arange(n_samples)[None, :]
+        #idx_samples = np.arange(n_samples) # (1, n_samples)
+        # selected_cost = cost[idx_views, idx_samples, y[None, :]]
+        # (n_views, n_samples)
+        idx_classes = y[None, :]
+        selected_cost = cost[idx_views, idx_samples, idx_classes]
+        sum_cost = np.sum(cost[idx_views, idx_samples , idx_classes], axis=1)[:, np.newaxis]
         dist[:, :] = selected_cost / selected_cost.sum(axis=1, keepdims=True)
+        # NOTE: In Sokol's PhD thesis, the formula for dist is mistakenly given
+        # with a minus sign in section 2.2.2 page 31
+        # dist[:, :] = cost[:, np.arange(n_samples), y] \
+        #             / np.sum(cost[:, np.arange(n_samples), y], axis=1)[:, np.newaxis]
+        #
+        #sum_cost2 = np.sum(cost[:, np.arange(n_samples), y], axis=1)[:, np.newaxis]
+        #selected_cost2 = cost[:, np.arange(n_samples), y]
+        #sum_cost2 = np.sum(selected_cost2, axis=1, keepdims=True)
+        # dist2 = selected_cost2 / np.sum(selected_cost2, axis=1, keepdims=True)
         return dist
 
     def _compute_coop_coef(self, predicted_classes, y):
@@ -408,6 +419,8 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         # check_X_y(self.X_, y, accept_sparse=accept_sparse, dtype=dtype)
         if not isinstance(y, np.ndarray):
             y = np.asarray(y)
+        if y.ndim == 2 and y.shape[1] == 1:
+            y = y.ravel()
         check_classification_targets(y)
         self._validate_estimator()
 

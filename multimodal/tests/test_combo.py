@@ -845,7 +845,7 @@ class TestMuComboClassifier(unittest.TestCase):
     #
 
     def test_classifier(self):
-        return check_estimator(MuComboClassifier())
+        check_estimator(MuComboClassifier())
     #
     #
     # def test_iris():

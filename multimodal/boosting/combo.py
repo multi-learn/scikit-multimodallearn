@@ -240,7 +240,7 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         n_views, n_samples, n_classes = cost.shape
         idx_views = np.arange(n_views)[:, np.newaxis]   # (n_views, 1)
         idx_samples = np.arange(n_samples)[None, :]          # (n_samples,)
-        idx_classes = np.asarray(y).reshape(-1)[None, :]
+        idx_classes = y[None, :]
         sum_cost = np.sum(cost[idx_views, idx_samples , idx_classes], axis=1)[:, np.newaxis]
         sum_cost[sum_cost==0] = 1
         dist[:,:] = cost[idx_views, idx_samples , idx_classes]  /  sum_cost
@@ -462,6 +462,8 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         #check_X_y(self.X_, y)
         if not isinstance(y, np.ndarray):
             y = np.asarray(y)
+        if y.ndim == 2 and y.shape[1] == 1:
+            y = y.ravel()
         check_classification_targets(y)
         self._validate_estimator()
 
