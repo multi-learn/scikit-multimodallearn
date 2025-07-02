@@ -77,8 +77,12 @@ class UBoosting(BaseEstimator, metaclass=ABCMeta):
         return estimator
 
     def __sklearn_tags__(self):
-        tags = super().__sklearn_tags__()
-        tags.input_tags.sparse = True
+        if hasattr(super(), "__sklearn_tags__"):
+            tags = super().__sklearn_tags__()
+            tags.input_tags.sparse = True
+        else:
+            tags = {}
+            tags.update({"allow_sparse": True, })
         return tags
 
 
