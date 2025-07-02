@@ -56,7 +56,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree._tree import DTYPE
 from sklearn.tree import BaseDecisionTree
-from sklearn.utils import check_X_y, check_random_state
+from sklearn.utils import check_X_y, check_random_state, check_array
 from sklearn.utils.multiclass import check_classification_targets
 from sklearn.utils.validation import check_is_fitted, has_fit_parameter
 from cvxopt import solvers, matrix, spdiag, exp, spmatrix, mul, div
