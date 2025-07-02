@@ -56,11 +56,13 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import BaseDecisionTree
 from sklearn.tree._tree import DTYPE
 from sklearn.utils import check_array, check_X_y, check_random_state
-from sklearn.utils.validation import validate_data
 from sklearn.utils.multiclass import check_classification_targets
 from sklearn.utils.validation import check_is_fitted, has_fit_parameter
 from .boost import UBoosting
-
+try:
+    from sklearn.utils.validation import validate_data
+except ImportError:
+    validate_data = None
 
 class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
     r"""It then iterates the process on the same dataset but where the weights of
@@ -415,7 +417,10 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         self.X_ = self._global_X_transform(X, views_ind=views_ind)
         views_ind_, n_views = self.X_._validate_views_ind(self.X_.views_ind,
                                                           self.X_.shape[1])
-        validate_data(self, self.X_, y, accept_sparse=accept_sparse)
+        if validate_data is not None:
+            validate_data(self, self.X_, y, accept_sparse=accept_sparse)
+        else:
+            check_X_y(self.X_, y, accept_sparse=accept_sparse, dtype=dtype)
         # check_X_y(self.X_, y, accept_sparse=accept_sparse, dtype=dtype)
         if not isinstance(y, np.ndarray):
             y = np.asarray(y)
@@ -577,7 +582,13 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         check_is_fitted(self, ("estimators_", "estimator_weights_",
                                "n_classes_", "X_"))
         X = self._global_X_transform(X, views_ind=self.X_.views_ind)
-        validate_data(self, X, reset=False, accept_sparse=True)
+
+
+        if validate_data is not None:
+            validate_data(self, X, reset=False, accept_sparse=True)
+        else:
+            check_X_y(X, accept_sparse=True)
+        
         X = self._validate_X_predict(X)
 
         n_samples = X.shape[0]
