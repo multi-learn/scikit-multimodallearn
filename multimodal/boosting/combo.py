@@ -62,7 +62,10 @@ from sklearn.utils.validation import check_is_fitted, has_fit_parameter
 from cvxopt import solvers, matrix, spdiag, exp, spmatrix, mul, div
 from .boost import UBoosting
 import warnings
-
+try:
+    from sklearn.utils.validation import validate_data
+except ImportError:
+    validate_data = None
 
 class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
     r"""It then iterates the process on the same dataset but where the weights of
@@ -446,10 +449,6 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         ValueError where `X` and `view_ind` are not compatibles
         """
         warnings.filterwarnings("ignore", category=RuntimeWarning)
-        try:
-            from sklearn.utils.validation import validate_data
-        except ImportError:
-            validate_data = None
         if (self.estimator is None or
                 isinstance(self.estimator, (BaseDecisionTree,
                                                  BaseForest))):
@@ -604,7 +603,10 @@ class MuComboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         check_is_fitted(self, ("estimators_", "estimator_weights_alpha_","n_views_",
                                "estimator_weights_beta_", "n_classes_"))
         X = self._global_X_transform(X, views_ind=self.X_.views_ind)
-        validate_data(self, X, reset=False, accept_sparse=True)
+        if validate_data is not None:
+            validate_data(self, X, reset=False, accept_sparse=True)
+        else:
+            check_X_y(X, accept_sparse=True)
         X = self._validate_X_predict(X)
 
         n_samples = X.shape[0]
