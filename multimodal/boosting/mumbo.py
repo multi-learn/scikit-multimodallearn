@@ -587,7 +587,7 @@ class MumboClassifier(ClassifierMixin, UBoosting, BaseEnsemble):
         if validate_data is not None:
             validate_data(self, X, reset=False, accept_sparse=True)
         else:
-            check_X_y(X, accept_sparse=True)
+            check_array(X, accept_sparse=True)
         
         X = self._validate_X_predict(X)
 
