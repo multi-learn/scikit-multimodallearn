@@ -1,0 +1,21 @@
+multimodal.tests.data package
+=============================
+
+Submodules
+----------
+
+multimodal.tests.data.get\_dataset\_path module
+-----------------------------------------------
+
+.. automodule:: multimodal.tests.data.get_dataset_path
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: multimodal.tests.data
+   :members:
+   :undoc-members:
+   :show-inheritance:

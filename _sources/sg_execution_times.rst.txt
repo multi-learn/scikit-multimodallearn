@@ -1,0 +1,64 @@
+
+:orphan:
+
+.. _sphx_glr_sg_execution_times:
+
+
+Computation times
+=================
+**00:06.432** total execution time for 10 files **from all galleries**:
+
+.. container::
+
+  .. raw:: html
+
+    <style scoped>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" class="init">
+    $(document).ready( function () {
+        $('table.sg-datatable').DataTable({order: [[1, 'desc']]});
+    } );
+    </script>
+
+  .. list-table::
+   :header-rows: 1
+   :class: table table-striped sg-datatable
+
+   * - Example
+     - Time
+     - Mem (MB)
+   * - :ref:`sphx_glr_tutorial_auto_examples_usecase_plot_usecase_exampleMuComBo.py` (``../examples/usecase/plot_usecase_exampleMuComBo.py``)
+     - 00:03.578
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_usecase_plot_usecase_exampleMumBo.py` (``../examples/usecase/plot_usecase_exampleMumBo.py``)
+     - 00:02.481
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_combo_plot_combo_3_views_3_classes.py` (``../examples/combo/plot_combo_3_views_3_classes.py``)
+     - 00:00.209
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_combo_plot_combo_2_views_2_classes.py` (``../examples/combo/plot_combo_2_views_2_classes.py``)
+     - 00:00.164
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_mumbo_plot_mumbo_2_views_2_classes.py` (``../examples/mumbo/plot_mumbo_2_views_2_classes.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_mumbo_plot_mumbo_3_views_3_classes.py` (``../examples/mumbo/plot_mumbo_3_views_3_classes.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_mvml_plot_mvml_.py` (``../examples/mvml/plot_mvml_.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_usecase_plot_usecase_exampleMKL.py` (``../examples/usecase/plot_usecase_exampleMKL.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_usecase_plot_usecase_exampleMVML.py` (``../examples/usecase/plot_usecase_exampleMVML.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_tutorial_auto_examples_usecase_usecase_function.py` (``../examples/usecase/usecase_function.py``)
+     - 00:00.000
+     - 0.0

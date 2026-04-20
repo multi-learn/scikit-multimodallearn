@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>multimodal.boosting package &mdash; scikit-multimodallearn 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            scikit-multimodallearn
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/install_devel.html">Installation and development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/auto_examples/index.html">Multimodal Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/times.html">Computation times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/credits.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scikit-multimodallearn</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">multimodal.boosting package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/multimodal.boosting.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multimodal-boosting-package">
+<h1>multimodal.boosting package<a class="headerlink" href="#multimodal-boosting-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-multimodal.boosting.boost">
+<span id="multimodal-boosting-boost-module"></span><h2>multimodal.boosting.boost module<a class="headerlink" href="#module-multimodal.boosting.boost" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.boosting.boost.UBoosting">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.boosting.boost.</span></span><span class="sig-name descname"><span class="pre">UBoosting</span></span><a class="headerlink" href="#multimodal.boosting.boost.UBoosting" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code></p>
+<p>Abstract class MuComboClassifier and  MumboClassifier should inherit from
+UBoosting for methods</p>
+</dd></dl>
+
+</section>
+<section id="module-multimodal.boosting.combo">
+<span id="multimodal-boosting-combo-module"></span><h2>multimodal.boosting.combo module<a class="headerlink" href="#module-multimodal.boosting.combo" title="Permalink to this heading"></a></h2>
+<p>This module contains a <strong>Mu</strong>lti<strong>C</strong>onfusion <strong>M</strong>Matrix <strong>B</strong>osting (<strong>CoMBo</strong>)
+estimator for classification implemented in the <code class="docutils literal notranslate"><span class="pre">MuComboClassifier</span></code> class.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.boosting.combo.</span></span><span class="sig-name descname"><span class="pre">MuComboClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>, <a class="reference internal" href="reference/api.html#multimodal.boosting.boost.UBoosting" title="multimodal.boosting.boost.UBoosting"><code class="xref py py-class docutils literal notranslate"><span class="pre">UBoosting</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEnsemble</span></code></p>
+<p>It then iterates the process on the same dataset but where the weights of
+incorrectly classified instances are adjusted such that subsequent
+classifiers focus more on difficult cases.
+A MuCoMBo classifier.</p>
+<p>A MuMBo classifier is a meta-estimator that implements a multimodal
+(or multi-view) boosting algorithm:</p>
+<p>It fits a set of classifiers on the original dataset splitted into several
+views and retains the classifier obtained for the best view.</p>
+<p>This class implements the MuMBo algorithm <a class="reference internal" href="reference/api.html#r91455d958dc7-1" id="id1">[1]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>estimator</strong><span class="classifier">object, optional (default=DecisionTreeClassifier)</span></dt><dd><p>Base estimator from which the boosted ensemble is built.
+Support for sample weighting is required, as well as proper <cite>classes_</cite>
+and <cite>n_classes_</cite> attributes. The default is a DecisionTreeClassifier
+with parameter <code class="docutils literal notranslate"><span class="pre">max_depth=1</span></code>.</p>
+</dd>
+<dt><strong>n_estimators</strong><span class="classifier">integer, optional (default=50)</span></dt><dd><p>Maximum number of estimators at which boosting is terminated.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int, RandomState instance or None, optional (default=None)</span></dt><dd><p>If int, random_state is the seed used by the random number generator;
+If RandomState instance, random_state is the random number generator;
+If None, the random number generator is the RandomState instance used
+by <cite>np.random</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.ensemble.AdaBoostClassifier</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.ensemble.GradientBoostingClassifier</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.tree.DecisionTreeClassifier</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">References</p>
+<div role="list" class="citation-list">
+<div class="citation" id="r91455d958dc7-1" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Koc{c}o, Sokol and Capponi, C{'e}cile
+A Boosting Approach to Multiview Classification with Cooperation,
+2011,Proceedings of the 2011 European Conference on Machine Learning
+and Knowledge Discovery in Databases - Volume Part II, 209–228 Springer-Verlag
+<a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-642-23783-6_1">https://link.springer.com/chapter/10.1007/978-3-642-23783-6_1</a></p>
+</div>
+<div class="citation" id="r91455d958dc7-2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<p>Sokol Koço,
+“Tackling the uneven views problem with cooperation based ensemble
+learning methods”,
+PhD Thesis, Aix-Marseille Université, 2013,
+<a class="reference external" href="http://www.theses.fr/en/2013AIXM4101">http://www.theses.fr/en/2013AIXM4101</a>.</p>
+</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.boosting.combo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MuComboClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># view 0: sepal data, view 1: petal data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MuComboClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MuComboClassifier(random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">[0]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>  <span class="c1"># view 0: length data, view 1: width data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MuComboClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MuComboClassifier(random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">[0]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">estimator</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MuComboClassifier</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">estimator</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MuComboClassifier(estimator=DecisionTreeClassifier(max_depth=2),</span>
+<span class="go">                  random_state=1)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">[0]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>estimators_</strong><span class="classifier">list of classifiers</span></dt><dd><p>Collection of fitted sub-estimators.</p>
+</dd>
+<dt><strong>classes_</strong><span class="classifier">numpy.ndarray, shape = (n_classes,)</span></dt><dd><p>Classes labels.</p>
+</dd>
+<dt><strong>n_classes_</strong><span class="classifier">int</span></dt><dd><p>Number of classes.</p>
+</dd>
+<dt><strong>n_views_</strong><span class="classifier">int</span></dt><dd><p>Number of views</p>
+</dd>
+<dt><strong>estimator_weights_</strong><span class="classifier">numpy.ndarray of floats, shape = (len(estimators_),)</span></dt><dd><p>Weights for each estimator in the boosted ensemble.</p>
+</dd>
+<dt><strong>estimator_errors_</strong><span class="classifier">array of floats</span></dt><dd><p>Empirical loss for each iteration.</p>
+</dd>
+<dt><strong>best_views_</strong><span class="classifier">numpy.ndarray of integers, shape = (len(estimators_),)</span></dt><dd><p>Indices of the best view for each estimator in the boosted ensemble.</p>
+</dd>
+<dt><strong>n_yi_</strong><span class="classifier">numpy ndarray of int contains number of train sample for each classe shape (n_classes,)</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier.decision_function">
+<span class="sig-name descname"><span class="pre">decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier.decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the decision function of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">numpy.ndarray, shape = (n_view, n_samples, k)</span></dt><dd><p>Decision function of the input samples.
+The order of outputs is the same of that of the <cite>classes_</cite>
+attribute.
+Binary classification is a special cases with <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">1</span></code>,
+otherwise <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">n_classes</span></code>. For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Build a multimodal boosted classifier from the training set (X, y).</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views</span></dt><dd><p>or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>, <cite>MultiModalSparseArray</cite>
+or
+{array-like, sparse matrix}, shape = (n_samples, n_features)
+Training multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>If views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code>.</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+<li><p>If views_ind is an array of arrays of integers, then each array
+of integers <code class="docutils literal notranslate"><span class="pre">views_ind[n]</span></code> specifies the indices of the view
+<code class="docutils literal notranslate"><span class="pre">n</span></code>, which is then given by <code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]]</span></code>.</p>
+<p>With this convention each view creates therefore a partial copy
+of the data in X. This convention is thus more flexible but less
+efficient than the previous one.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Returns self.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ValueError  estimator must support sample_weight</dt><dd></dd>
+<dt>ValueError where <cite>X</cite> and <cite>view_ind</cite> are not compatibles</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict classes for X.</p>
+<p>The predicted class of an input sample is computed as the weighted mean
+prediction of the classifiers in the ensemble.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ValueError   ‘X’ input matrix must be have the same total number of features</dt><dd><p>of ‘X’ fit data</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier.score" title="Permalink to this definition"></a></dt>
+<dd><p>Return the mean accuracy on the given test data and labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view test samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier.set_fit_request">
+<span class="sig-name descname"><span class="pre">set_fit_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="reference/api.html#multimodal.boosting.combo.MuComboClassifier" title="multimodal.boosting.combo.MuComboClassifier"><span class="pre">MuComboClassifier</span></a></span></span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier.set_fit_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">fit</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>views_ind</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">views_ind</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier.staged_decision_function">
+<span class="sig-name descname"><span class="pre">staged_decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier.staged_decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute decision function of X for each boosting iteration.</p>
+<p>This method allows monitoring (i.e. determine error on testing set)
+after each boosting iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">generator of numpy.ndarrays, shape = (n_samples, k)</span></dt><dd><p>Decision function of the input samples.
+The order of outputs is the same of that of the <cite>classes_</cite>
+attribute.
+Binary classification is a special cases with <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">1</span></code>,
+otherwise <code class="docutils literal notranslate"><span class="pre">k==n_classes</span></code>. For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier.staged_predict">
+<span class="sig-name descname"><span class="pre">staged_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier.staged_predict" title="Permalink to this definition"></a></dt>
+<dd><p>Return staged predictions for X.</p>
+<p>The predicted class of an input sample is computed as the weighted mean
+prediction of the classifiers in the ensemble.</p>
+<p>This generator method yields the ensemble prediction after each
+iteration of boosting and therefore allows monitoring, such as to
+determine the prediction on a test set after each boost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">generator of numpy.ndarrays, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.combo.MuComboClassifier.staged_score">
+<span class="sig-name descname"><span class="pre">staged_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.combo.MuComboClassifier.staged_score" title="Permalink to this definition"></a></dt>
+<dd><p>Return staged mean accuracy on the given test data and labels.</p>
+<p>This generator method yields the ensemble score after each iteration of
+boosting and therefore allows monitoring, such as to determine the
+score on a test set after each boost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view test samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">generator of floats</span></dt><dd><p>Mean accuracy of self.staged_predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.boosting.mumbo">
+<span id="multimodal-boosting-mumbo-module"></span><h2>multimodal.boosting.mumbo module<a class="headerlink" href="#module-multimodal.boosting.mumbo" title="Permalink to this heading"></a></h2>
+<p>Multimodal Boosting</p>
+<p>This module contains a <strong>Mu</strong>lti<strong>M</strong>odal <strong>Bo</strong>osting (<strong>MuMBo</strong>)
+estimator for classification implemented in the <code class="docutils literal notranslate"><span class="pre">MumboClassifier</span></code> class.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.boosting.mumbo.</span></span><span class="sig-name descname"><span class="pre">MumboClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">best_view_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'edge'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>, <a class="reference internal" href="reference/api.html#multimodal.boosting.boost.UBoosting" title="multimodal.boosting.boost.UBoosting"><code class="xref py py-class docutils literal notranslate"><span class="pre">UBoosting</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEnsemble</span></code></p>
+<p>It then iterates the process on the same dataset but where the weights of
+incorrectly classified instances are adjusted such that subsequent
+classifiers focus more on difficult cases.
+A MuMBo classifier.</p>
+<p>A MuMBo classifier is a meta-estimator that implements a multimodal
+(or multi-view) boosting algorithm:</p>
+<p>It fits a set of classifiers on the original dataset splitted into several
+views and retains the classifier obtained for the best view.</p>
+<p>This class implements the MuMBo algorithm <a class="reference internal" href="reference/api.html#rf391fc3bc816-1" id="id4">[1]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>estimator</strong><span class="classifier">object, optional (default=DecisionTreeClassifier)</span></dt><dd><p>Base estimator from which the boosted ensemble is built.
+Support for sample weighting is required, as well as proper <cite>classes_</cite>
+and <cite>n_classes_</cite> attributes. The default is a DecisionTreeClassifie
+with parameter <code class="docutils literal notranslate"><span class="pre">max_depth=1</span></code>.</p>
+</dd>
+<dt><strong>n_estimators</strong><span class="classifier">integer, optional (default=50)</span></dt><dd><p>Maximum number of estimators at which boosting is terminated.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int, RandomState instance or None, optional (default=None)</span></dt><dd><p>If int, random_state is the seed used by the random number generator;
+If RandomState instance, random_state is the random number generator;
+If None, the random number generator is the RandomState instance used
+by <cite>np.random</cite>.</p>
+</dd>
+<dt><strong>best_view_mode</strong><span class="classifier">{“edge”, “error”}, optional (default=”edge”)</span></dt><dd><p>Mode used to select the best view at each iteration:</p>
+<ul class="simple">
+<li><p>if <code class="docutils literal notranslate"><span class="pre">best_view_mode</span> <span class="pre">==</span> <span class="pre">&quot;edge&quot;</span></code>, the best view is the view maximizing
+the edge value (variable δ (<em>delta</em>) in <a class="reference internal" href="reference/api.html#rf391fc3bc816-1" id="id5">[1]</a>),</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">best_view_mode</span> <span class="pre">==</span> <span class="pre">&quot;error&quot;</span></code>, the best view is the view
+minimizing the classification error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.ensemble.AdaBoostClassifier</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.ensemble.GradientBoostingClassifier</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.tree.DecisionTreeClassifier</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">References</p>
+<div role="list" class="citation-list">
+<div class="citation" id="rf391fc3bc816-1" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id4">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>Sokol Koço,
+“Tackling the uneven views problem with cooperation based ensemble
+learning methods”,</p>
+</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.boosting.mumbo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MumboClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># view 0: sepal data, view 1: petal data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MumboClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MumboClassifier(random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.8</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">]]))</span>
+<span class="go">[1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>  <span class="c1"># view 0: length data, view 1: width data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MumboClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MumboClassifier(random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.8</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">]]))</span>
+<span class="go">[1]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">estimator</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MumboClassifier</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">estimator</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MumboClassifier(estimator=DecisionTreeClassifier(max_depth=2),</span>
+<span class="go">                random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.8</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">[1]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>estimators_</strong><span class="classifier">list of classifiers</span></dt><dd><p>Collection of fitted sub-estimators.</p>
+</dd>
+<dt><strong>classes_</strong><span class="classifier">numpy.ndarray, shape = (n_classes,)</span></dt><dd><p>Classes labels.</p>
+</dd>
+<dt><strong>n_classes_</strong><span class="classifier">int</span></dt><dd><p>Number of classes.</p>
+</dd>
+<dt><strong>estimator_weights_</strong><span class="classifier">numpy.ndarray of floats, shape = (len(estimators</span></dt><dd><p>Weights for each estimator in the boosted ensemble.</p>
+</dd>
+<dt><strong>estimator_errors_</strong><span class="classifier">array of floats</span></dt><dd><p>Empirical loss for each iteration.</p>
+</dd>
+<dt><strong>best_views_</strong><span class="classifier">numpy.ndarray of integers, shape = (len(estimators_),)</span></dt><dd><p>Indices of the best view for each estimator in the boosted ensemble.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier.decision_function">
+<span class="sig-name descname"><span class="pre">decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier.decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the decision function of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{ array-like, sparse matrix},</span></dt><dd><p>shape = (n_samples, n_views * n_features)
+Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.
+maybe also MultimodalData</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">numpy.ndarray, shape = (n_samples, k)</span></dt><dd><p>Decision function of the input samples.
+The order of outputs is the same of that of the <cite>classes_</cite>
+attribute.
+Binary classification is a special cases with <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">1</span></code>,
+otherwise <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">n_classes</span></code>. For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Build a multimodal boosted classifier from the training set (X, y).</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views</span></dt><dd><p>or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>, <cite>MultiModalSparseArray</cite>
+or
+{array-like, sparse matrix}, shape = (n_samples, n_features)
+Training multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>If views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code>.</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+<li><p>If views_ind is an array of arrays of integers, then each array
+of integers <code class="docutils literal notranslate"><span class="pre">views_ind[n]</span></code> specifies the indices of the view
+<code class="docutils literal notranslate"><span class="pre">n</span></code>, which is then given by <code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]]</span></code>.</p>
+<p>With this convention each view creates therefore a partial copy
+of the data in X. This convention is thus more flexible but less
+efficient than the previous one.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Returns self.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict classes for X.</p>
+<p>The predicted class of an input sample is computed as the weighted mean
+prediction of the classifiers in the ensemble.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier.score" title="Permalink to this definition"></a></dt>
+<dd><p>Return the mean accuracy on the given test data and labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view test samples.
+Sparse matrix can be CSC, CSR</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier.set_fit_request">
+<span class="sig-name descname"><span class="pre">set_fit_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="reference/api.html#multimodal.boosting.mumbo.MumboClassifier" title="multimodal.boosting.mumbo.MumboClassifier"><span class="pre">MumboClassifier</span></a></span></span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier.set_fit_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">fit</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>views_ind</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">views_ind</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier.staged_decision_function">
+<span class="sig-name descname"><span class="pre">staged_decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier.staged_decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute decision function of X for each boosting iteration.</p>
+<p>This method allows monitoring (i.e. determine error on testing set)
+after each boosting iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.
+maybe also MultimodalData</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">generator of numpy.ndarrays, shape = (n_samples, k)</span></dt><dd><p>Decision function of the input samples.
+The order of outputs is the same of that of the <cite>classes_</cite>
+attribute.
+Binary classification is a special cases with <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">1</span></code>,
+otherwise <code class="docutils literal notranslate"><span class="pre">k==n_classes</span></code>. For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier.staged_predict">
+<span class="sig-name descname"><span class="pre">staged_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier.staged_predict" title="Permalink to this definition"></a></dt>
+<dd><p>Return staged predictions for X.</p>
+<p>The predicted class of an input sample is computed as the weighted mean
+prediction of the classifiers in the ensemble.</p>
+<p>This generator method yields the ensemble prediction after each
+iteration of boosting and therefore allows monitoring, such as to
+determine the prediction on a test set after each boost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">generator of numpy.ndarrays, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.mumbo.MumboClassifier.staged_score">
+<span class="sig-name descname"><span class="pre">staged_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.mumbo.MumboClassifier.staged_score" title="Permalink to this definition"></a></dt>
+<dd><p>Return staged mean accuracy on the given test data and labels.</p>
+<p>This generator method yields the ensemble score after each iteration of
+boosting and therefore allows monitoring, such as to determine the
+score on a test set after each boost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view test samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">generator of floats</span></dt><dd><p>Mean accuracy of self.staged_predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.boosting">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-multimodal.boosting" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.boosting.</span></span><span class="sig-name descname"><span class="pre">MuComboClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>, <a class="reference internal" href="reference/api.html#multimodal.boosting.boost.UBoosting" title="multimodal.boosting.boost.UBoosting"><code class="xref py py-class docutils literal notranslate"><span class="pre">UBoosting</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEnsemble</span></code></p>
+<p>It then iterates the process on the same dataset but where the weights of
+incorrectly classified instances are adjusted such that subsequent
+classifiers focus more on difficult cases.
+A MuCoMBo classifier.</p>
+<p>A MuMBo classifier is a meta-estimator that implements a multimodal
+(or multi-view) boosting algorithm:</p>
+<p>It fits a set of classifiers on the original dataset splitted into several
+views and retains the classifier obtained for the best view.</p>
+<p>This class implements the MuMBo algorithm <a class="reference internal" href="#r6606aee6f854-1" id="id7">[1]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>estimator</strong><span class="classifier">object, optional (default=DecisionTreeClassifier)</span></dt><dd><p>Base estimator from which the boosted ensemble is built.
+Support for sample weighting is required, as well as proper <cite>classes_</cite>
+and <cite>n_classes_</cite> attributes. The default is a DecisionTreeClassifier
+with parameter <code class="docutils literal notranslate"><span class="pre">max_depth=1</span></code>.</p>
+</dd>
+<dt><strong>n_estimators</strong><span class="classifier">integer, optional (default=50)</span></dt><dd><p>Maximum number of estimators at which boosting is terminated.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int, RandomState instance or None, optional (default=None)</span></dt><dd><p>If int, random_state is the seed used by the random number generator;
+If RandomState instance, random_state is the random number generator;
+If None, the random number generator is the RandomState instance used
+by <cite>np.random</cite>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.ensemble.AdaBoostClassifier</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.ensemble.GradientBoostingClassifier</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.tree.DecisionTreeClassifier</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">References</p>
+<div role="list" class="citation-list">
+<div class="citation" id="r6606aee6f854-1" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">1</a><span class="fn-bracket">]</span></span>
+<p>Koc{c}o, Sokol and Capponi, C{'e}cile
+A Boosting Approach to Multiview Classification with Cooperation,
+2011,Proceedings of the 2011 European Conference on Machine Learning
+and Knowledge Discovery in Databases - Volume Part II, 209–228 Springer-Verlag
+<a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-642-23783-6_1">https://link.springer.com/chapter/10.1007/978-3-642-23783-6_1</a></p>
+</div>
+<div class="citation" id="r6606aee6f854-2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<p>Sokol Koço,
+“Tackling the uneven views problem with cooperation based ensemble
+learning methods”,
+PhD Thesis, Aix-Marseille Université, 2013,
+<a class="reference external" href="http://www.theses.fr/en/2013AIXM4101">http://www.theses.fr/en/2013AIXM4101</a>.</p>
+</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.boosting.combo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MuComboClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># view 0: sepal data, view 1: petal data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MuComboClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MuComboClassifier(random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">[0]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>  <span class="c1"># view 0: length data, view 1: width data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MuComboClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MuComboClassifier(random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">[0]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">estimator</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MuComboClassifier</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">estimator</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MuComboClassifier(estimator=DecisionTreeClassifier(max_depth=2),</span>
+<span class="go">                  random_state=1)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">[0]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>estimators_</strong><span class="classifier">list of classifiers</span></dt><dd><p>Collection of fitted sub-estimators.</p>
+</dd>
+<dt><strong>classes_</strong><span class="classifier">numpy.ndarray, shape = (n_classes,)</span></dt><dd><p>Classes labels.</p>
+</dd>
+<dt><strong>n_classes_</strong><span class="classifier">int</span></dt><dd><p>Number of classes.</p>
+</dd>
+<dt><strong>n_views_</strong><span class="classifier">int</span></dt><dd><p>Number of views</p>
+</dd>
+<dt><strong>estimator_weights_</strong><span class="classifier">numpy.ndarray of floats, shape = (len(estimators_),)</span></dt><dd><p>Weights for each estimator in the boosted ensemble.</p>
+</dd>
+<dt><strong>estimator_errors_</strong><span class="classifier">array of floats</span></dt><dd><p>Empirical loss for each iteration.</p>
+</dd>
+<dt><strong>best_views_</strong><span class="classifier">numpy.ndarray of integers, shape = (len(estimators_),)</span></dt><dd><p>Indices of the best view for each estimator in the boosted ensemble.</p>
+</dd>
+<dt><strong>n_yi_</strong><span class="classifier">numpy ndarray of int contains number of train sample for each classe shape (n_classes,)</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier.decision_function">
+<span class="sig-name descname"><span class="pre">decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier.decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the decision function of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">numpy.ndarray, shape = (n_view, n_samples, k)</span></dt><dd><p>Decision function of the input samples.
+The order of outputs is the same of that of the <cite>classes_</cite>
+attribute.
+Binary classification is a special cases with <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">1</span></code>,
+otherwise <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">n_classes</span></code>. For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Build a multimodal boosted classifier from the training set (X, y).</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views</span></dt><dd><p>or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>, <cite>MultiModalSparseArray</cite>
+or
+{array-like, sparse matrix}, shape = (n_samples, n_features)
+Training multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>If views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code>.</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+<li><p>If views_ind is an array of arrays of integers, then each array
+of integers <code class="docutils literal notranslate"><span class="pre">views_ind[n]</span></code> specifies the indices of the view
+<code class="docutils literal notranslate"><span class="pre">n</span></code>, which is then given by <code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]]</span></code>.</p>
+<p>With this convention each view creates therefore a partial copy
+of the data in X. This convention is thus more flexible but less
+efficient than the previous one.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Returns self.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ValueError  estimator must support sample_weight</dt><dd></dd>
+<dt>ValueError where <cite>X</cite> and <cite>view_ind</cite> are not compatibles</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict classes for X.</p>
+<p>The predicted class of an input sample is computed as the weighted mean
+prediction of the classifiers in the ensemble.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ValueError   ‘X’ input matrix must be have the same total number of features</dt><dd><p>of ‘X’ fit data</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier.score" title="Permalink to this definition"></a></dt>
+<dd><p>Return the mean accuracy on the given test data and labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view test samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier.set_fit_request">
+<span class="sig-name descname"><span class="pre">set_fit_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="reference/api.html#multimodal.boosting.combo.MuComboClassifier" title="multimodal.boosting.combo.MuComboClassifier"><span class="pre">MuComboClassifier</span></a></span></span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier.set_fit_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">fit</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>views_ind</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">views_ind</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier.staged_decision_function">
+<span class="sig-name descname"><span class="pre">staged_decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier.staged_decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute decision function of X for each boosting iteration.</p>
+<p>This method allows monitoring (i.e. determine error on testing set)
+after each boosting iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">generator of numpy.ndarrays, shape = (n_samples, k)</span></dt><dd><p>Decision function of the input samples.
+The order of outputs is the same of that of the <cite>classes_</cite>
+attribute.
+Binary classification is a special cases with <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">1</span></code>,
+otherwise <code class="docutils literal notranslate"><span class="pre">k==n_classes</span></code>. For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier.staged_predict">
+<span class="sig-name descname"><span class="pre">staged_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier.staged_predict" title="Permalink to this definition"></a></dt>
+<dd><p>Return staged predictions for X.</p>
+<p>The predicted class of an input sample is computed as the weighted mean
+prediction of the classifiers in the ensemble.</p>
+<p>This generator method yields the ensemble prediction after each
+iteration of boosting and therefore allows monitoring, such as to
+determine the prediction on a test set after each boost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">generator of numpy.ndarrays, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MuComboClassifier.staged_score">
+<span class="sig-name descname"><span class="pre">staged_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MuComboClassifier.staged_score" title="Permalink to this definition"></a></dt>
+<dd><p>Return staged mean accuracy on the given test data and labels.</p>
+<p>This generator method yields the ensemble score after each iteration of
+boosting and therefore allows monitoring, such as to determine the
+score on a test set after each boost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view test samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">generator of floats</span></dt><dd><p>Mean accuracy of self.staged_predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.boosting.</span></span><span class="sig-name descname"><span class="pre">MumboClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_estimators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">best_view_mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'edge'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MumboClassifier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>, <a class="reference internal" href="reference/api.html#multimodal.boosting.boost.UBoosting" title="multimodal.boosting.boost.UBoosting"><code class="xref py py-class docutils literal notranslate"><span class="pre">UBoosting</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEnsemble</span></code></p>
+<p>It then iterates the process on the same dataset but where the weights of
+incorrectly classified instances are adjusted such that subsequent
+classifiers focus more on difficult cases.
+A MuMBo classifier.</p>
+<p>A MuMBo classifier is a meta-estimator that implements a multimodal
+(or multi-view) boosting algorithm:</p>
+<p>It fits a set of classifiers on the original dataset splitted into several
+views and retains the classifier obtained for the best view.</p>
+<p>This class implements the MuMBo algorithm <a class="reference internal" href="#r926aa6c1a4a6-1" id="id10">[1]</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>estimator</strong><span class="classifier">object, optional (default=DecisionTreeClassifier)</span></dt><dd><p>Base estimator from which the boosted ensemble is built.
+Support for sample weighting is required, as well as proper <cite>classes_</cite>
+and <cite>n_classes_</cite> attributes. The default is a DecisionTreeClassifie
+with parameter <code class="docutils literal notranslate"><span class="pre">max_depth=1</span></code>.</p>
+</dd>
+<dt><strong>n_estimators</strong><span class="classifier">integer, optional (default=50)</span></dt><dd><p>Maximum number of estimators at which boosting is terminated.</p>
+</dd>
+<dt><strong>random_state</strong><span class="classifier">int, RandomState instance or None, optional (default=None)</span></dt><dd><p>If int, random_state is the seed used by the random number generator;
+If RandomState instance, random_state is the random number generator;
+If None, the random number generator is the RandomState instance used
+by <cite>np.random</cite>.</p>
+</dd>
+<dt><strong>best_view_mode</strong><span class="classifier">{“edge”, “error”}, optional (default=”edge”)</span></dt><dd><p>Mode used to select the best view at each iteration:</p>
+<ul class="simple">
+<li><p>if <code class="docutils literal notranslate"><span class="pre">best_view_mode</span> <span class="pre">==</span> <span class="pre">&quot;edge&quot;</span></code>, the best view is the view maximizing
+the edge value (variable δ (<em>delta</em>) in <a class="reference internal" href="#r926aa6c1a4a6-1" id="id11">[1]</a>),</p></li>
+<li><p>if <code class="docutils literal notranslate"><span class="pre">best_view_mode</span> <span class="pre">==</span> <span class="pre">&quot;error&quot;</span></code>, the best view is the view
+minimizing the classification error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.ensemble.AdaBoostClassifier</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.ensemble.GradientBoostingClassifier</span></code></dt><dd></dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">sklearn.tree.DecisionTreeClassifier</span></code></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">References</p>
+<div role="list" class="citation-list">
+<div class="citation" id="r926aa6c1a4a6-1" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id10">1</a>,<a role="doc-backlink" href="#id11">2</a>)</span>
+<p>Sokol Koço,
+“Tackling the uneven views problem with cooperation based ensemble
+learning methods”,</p>
+</div>
+</div>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.boosting.mumbo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MumboClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># view 0: sepal data, view 1: petal data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MumboClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MumboClassifier(random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.8</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">]]))</span>
+<span class="go">[1]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>  <span class="c1"># view 0: length data, view 1: width data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MumboClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MumboClassifier(random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.8</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.0</span><span class="p">]]))</span>
+<span class="go">[1]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">estimator</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MumboClassifier</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">estimator</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MumboClassifier(estimator=DecisionTreeClassifier(max_depth=2),</span>
+<span class="go">                random_state=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.8</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">[1]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>estimators_</strong><span class="classifier">list of classifiers</span></dt><dd><p>Collection of fitted sub-estimators.</p>
+</dd>
+<dt><strong>classes_</strong><span class="classifier">numpy.ndarray, shape = (n_classes,)</span></dt><dd><p>Classes labels.</p>
+</dd>
+<dt><strong>n_classes_</strong><span class="classifier">int</span></dt><dd><p>Number of classes.</p>
+</dd>
+<dt><strong>estimator_weights_</strong><span class="classifier">numpy.ndarray of floats, shape = (len(estimators</span></dt><dd><p>Weights for each estimator in the boosted ensemble.</p>
+</dd>
+<dt><strong>estimator_errors_</strong><span class="classifier">array of floats</span></dt><dd><p>Empirical loss for each iteration.</p>
+</dd>
+<dt><strong>best_views_</strong><span class="classifier">numpy.ndarray of integers, shape = (len(estimators_),)</span></dt><dd><p>Indices of the best view for each estimator in the boosted ensemble.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier.decision_function">
+<span class="sig-name descname"><span class="pre">decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MumboClassifier.decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the decision function of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{ array-like, sparse matrix},</span></dt><dd><p>shape = (n_samples, n_views * n_features)
+Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.
+maybe also MultimodalData</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">numpy.ndarray, shape = (n_samples, k)</span></dt><dd><p>Decision function of the input samples.
+The order of outputs is the same of that of the <cite>classes_</cite>
+attribute.
+Binary classification is a special cases with <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">1</span></code>,
+otherwise <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">n_classes</span></code>. For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MumboClassifier.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Build a multimodal boosted classifier from the training set (X, y).</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views</span></dt><dd><p>or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>, <cite>MultiModalSparseArray</cite>
+or
+{array-like, sparse matrix}, shape = (n_samples, n_features)
+Training multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>If views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code>.</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+<li><p>If views_ind is an array of arrays of integers, then each array
+of integers <code class="docutils literal notranslate"><span class="pre">views_ind[n]</span></code> specifies the indices of the view
+<code class="docutils literal notranslate"><span class="pre">n</span></code>, which is then given by <code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]]</span></code>.</p>
+<p>With this convention each view creates therefore a partial copy
+of the data in X. This convention is thus more flexible but less
+efficient than the previous one.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Returns self.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MumboClassifier.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Predict classes for X.</p>
+<p>The predicted class of an input sample is computed as the weighted mean
+prediction of the classifiers in the ensemble.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MumboClassifier.score" title="Permalink to this definition"></a></dt>
+<dd><p>Return the mean accuracy on the given test data and labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view test samples.
+Sparse matrix can be CSC, CSR</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier.set_fit_request">
+<span class="sig-name descname"><span class="pre">set_fit_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="reference/api.html#multimodal.boosting.mumbo.MumboClassifier" title="multimodal.boosting.mumbo.MumboClassifier"><span class="pre">MumboClassifier</span></a></span></span><a class="headerlink" href="#multimodal.boosting.MumboClassifier.set_fit_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">fit</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>views_ind</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">views_ind</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier.staged_decision_function">
+<span class="sig-name descname"><span class="pre">staged_decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MumboClassifier.staged_decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute decision function of X for each boosting iteration.</p>
+<p>This method allows monitoring (i.e. determine error on testing set)
+after each boosting iteration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.
+maybe also MultimodalData</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">generator of numpy.ndarrays, shape = (n_samples, k)</span></dt><dd><p>Decision function of the input samples.
+The order of outputs is the same of that of the <cite>classes_</cite>
+attribute.
+Binary classification is a special cases with <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">==</span> <span class="pre">1</span></code>,
+otherwise <code class="docutils literal notranslate"><span class="pre">k==n_classes</span></code>. For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier.staged_predict">
+<span class="sig-name descname"><span class="pre">staged_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MumboClassifier.staged_predict" title="Permalink to this definition"></a></dt>
+<dd><p>Return staged predictions for X.</p>
+<p>The predicted class of an input sample is computed as the weighted mean
+prediction of the classifiers in the ensemble.</p>
+<p>This generator method yields the ensemble prediction after each
+iteration of boosting and therefore allows monitoring, such as to
+determine the prediction on a test set after each boost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view input samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">generator of numpy.ndarrays, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.boosting.MumboClassifier.staged_score">
+<span class="sig-name descname"><span class="pre">staged_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.boosting.MumboClassifier.staged_score" title="Permalink to this definition"></a></dt>
+<dd><p>Return staged mean accuracy on the given test data and labels.</p>
+<p>This generator method yields the ensemble score after each iteration of
+boosting and therefore allows monitoring, such as to determine the
+score on a test set after each boost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like, sparse matrix} of shape = (n_samples, n_features)</span></dt><dd><p>Multi-view test samples.
+Sparse matrix can be CSC, CSR, COO, DOK, or LIL.
+COO, DOK and LIL are converted to CSR.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">generator of floats</span></dt><dd><p>Mean accuracy of self.staged_predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2026, LIS UMR 7020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+multimodal.datasets package
+===========================
+
+Submodules
+----------
+
+multimodal.datasets.base module
+-------------------------------
+
+.. automodule:: multimodal.datasets.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.datasets.data\_sample module
+---------------------------------------
+
+.. automodule:: multimodal.datasets.data_sample
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: multimodal.datasets
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>multimodal.kernels package &mdash; scikit-multimodallearn 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            scikit-multimodallearn
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/install_devel.html">Installation and development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/auto_examples/index.html">Multimodal Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/times.html">Computation times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/credits.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scikit-multimodallearn</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">multimodal.kernels package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/multimodal.kernels.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multimodal-kernels-package">
+<h1>multimodal.kernels package<a class="headerlink" href="#multimodal-kernels-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-multimodal.kernels.lpMKL">
+<span id="multimodal-kernels-lpmkl-module"></span><h2>multimodal.kernels.lpMKL module<a class="headerlink" href="#module-multimodal.kernels.lpMKL" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.kernels.lpMKL.MKL">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.kernels.lpMKL.</span></span><span class="sig-name descname"><span class="pre">MKL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lmbda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nystrom_param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_approx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.lpMKL.MKL" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>, <a class="reference internal" href="reference/api.html#multimodal.kernels.mkernel.MKernel" title="multimodal.kernels.mkernel.MKernel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MKernel</span></code></a></p>
+<p>MKL Classifier for multiview learning</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>lmbda</strong><span class="classifier">float coeficient for combined kernels</span></dt><dd></dd>
+<dt><strong>nystrom_param</strong><span class="classifier">float (default</span><span class="classifier">1.0)</span></dt><dd><p>value between 0 and 1 indicating level of nyström approximation;
+1 = no approximation</p>
+</dd>
+<dt><strong>kernel</strong><span class="classifier">list of str (default: “precomputed”) if kernel is as input of fit function set kernel to</span></dt><dd><p>“precomputed”
+list or str indicate the metrics used for each kernels
+list of pairwise kernel function name
+(default : “precomputed”) if kernel is as input of fit function set kernel to “precomputed”
+example : [‘rbf’, ‘additive_chi2’, ‘linear’ ] for function defined in as
+PAIRWISE_KERNEL_FUNCTIONS</p>
+</dd>
+<dt><strong>kernel_params</strong><span class="classifier">list of str default</span><span class="classifier">None) list of dictionaries for parameters of kernel [{‘gamma’:50}</span></dt><dd><p>list of dict of corresponding kernels params KERNEL_PARAMS</p>
+</dd>
+<dt><strong>use_approx</strong><span class="classifier">(default</span><span class="classifier">True) to use approximation of m_param &lt; 1</span></dt><dd></dd>
+<dt><strong>n_loops</strong><span class="classifier">(default 50) number of iterions</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>lmbda</strong><span class="classifier">float coeficient for combined kernels</span></dt><dd></dd>
+<dt><strong>m_param</strong><span class="classifier">float (default</span><span class="classifier">1.0)</span></dt><dd><p>value between 0 and 1 indicating level of nyström approximation;
+1 = no approximation</p>
+</dd>
+<dt><strong>kernel</strong><span class="classifier">list or str indicate the metrics used for each kernels</span></dt><dd><p>list of pairwise kernel function name
+(default : “precomputed”)
+example : [‘rbf’, ‘additive_chi2’, ‘linear’ ] for function defined in as
+PAIRWISE_KERNEL_FUNCTIONS
+example kernel=[‘rbf’, ‘rbf’], for the first two views</p>
+</dd>
+<dt><strong>kernel_params: list of dict of corresponding kernels params KERNEL_PARAMS</strong></dt><dd></dd>
+<dt><strong>precision</strong><span class="classifier">float (default</span><span class="classifier">1E-4) precision to stop algorithm</span></dt><dd></dd>
+<dt><strong>n_loops</strong><span class="classifier">number of iterions</span></dt><dd></dd>
+<dt><strong>classes_</strong><span class="classifier">array like unique label for classes</span></dt><dd></dd>
+<dt><strong>X_</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">metriclearning.datasets.data_sample.Metriclearn_array</span></code> array of input sample</span></dt><dd></dd>
+<dt><strong>K_</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">metriclearning.datasets.data_sample.Metriclearn_array</span></code> array of processed kernels</span></dt><dd></dd>
+<dt><strong>y_</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).</p>
+</dd>
+<dt><strong>C</strong><span class="classifier">learning solution that is learned in MKL</span></dt><dd></dd>
+<dt><strong>weights</strong><span class="classifier">learned weight for combining the solutions of views, learned in</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.lpMKL.MKL.decision_function">
+<span class="sig-name descname"><span class="pre">decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.lpMKL.MKL.decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the decision function of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views {array like} with shape = (n_samples, n_features)  for multi-view</span></dt><dd><p>for each view.
+or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>
+or
+{array-like,}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">numpy.ndarray, shape = (n_samples, )</span></dt><dd><p>Decision function of the input samples.
+For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.lpMKL.MKL.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.lpMKL.MKL.fit" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">different formats are supported</span></dt><dd><ul class="simple">
+<li><p>Metriclearn_array {array-like, sparse matrix}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p></li>
+<li><p>Dictionary of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>Array of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>{array like} with (n_samples, nviews *  n_features) with ‘views_ind’ diferent to ‘None’</p></li>
+</ul>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).
+array of length n_samples containing the classification/regression labels
+for training data</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code>.</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Returns self.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.lpMKL.MKL.learn_lpMKL">
+<span class="sig-name descname"><span class="pre">learn_lpMKL</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.lpMKL.MKL.learn_lpMKL" title="Permalink to this definition"></a></dt>
+<dd><p>function of lpMKL learning</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>return tuple (C, weights)</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.lpMKL.MKL.lpMKL_predict">
+<span class="sig-name descname"><span class="pre">lpMKL_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.lpMKL.MKL.lpMKL_predict" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like test kernels precomputed array like</span></dt><dd></dd>
+<dt><strong>C</strong><span class="classifier">corresponding to  Confusion learned matrix</span></dt><dd></dd>
+<dt><strong>weights</strong><span class="classifier">learned weights</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.lpMKL.MKL.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.lpMKL.MKL.predict" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views {array like} with shape = (n_samples, n_features)  for multi-view</span></dt><dd><p>for each view.
+or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>
+or
+{array-like,}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code>.</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.lpMKL.MKL.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.lpMKL.MKL.score" title="Permalink to this definition"></a></dt>
+<dd><p>Return the mean accuracy on the given test data and labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views {array like} with shape = (n_samples, n_features)  for multi-view</span></dt><dd><p>for each view.
+or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>
+or
+{array-like,}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.lpMKL.MKL.set_fit_request">
+<span class="sig-name descname"><span class="pre">set_fit_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="reference/api.html#multimodal.kernels.lpMKL.MKL" title="multimodal.kernels.lpMKL.MKL"><span class="pre">MKL</span></a></span></span><a class="headerlink" href="#multimodal.kernels.lpMKL.MKL.set_fit_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">fit</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>views_ind</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">views_ind</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.kernels.mkernel">
+<span id="multimodal-kernels-mkernel-module"></span><h2>multimodal.kernels.mkernel module<a class="headerlink" href="#module-multimodal.kernels.mkernel" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.kernels.mkernel.MKernel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.kernels.mkernel.</span></span><span class="sig-name descname"><span class="pre">MKernel</span></span><a class="headerlink" href="#multimodal.kernels.mkernel.MKernel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract class MKL and MVML should inherit from
+for methods of transform kernel to/from data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>W_sqrootinv_dict</strong><span class="classifier">dict of nyström approximation kernel</span></dt><dd><p>in the case of nystrom approximation
+the a dictonary of reduced kernel is calculated</p>
+</dd>
+<dt><strong>kernel_params</strong><span class="classifier">list of dict of corresponding kernels</span></dt><dd><p>params KERNEL_PARAMS</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-multimodal.kernels.mvml">
+<span id="multimodal-kernels-mvml-module"></span><h2>multimodal.kernels.mvml module<a class="headerlink" href="#module-multimodal.kernels.mvml" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.kernels.mvml.MVML">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.kernels.mvml.</span></span><span class="sig-name descname"><span class="pre">MVML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lmbda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nystrom_param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learn_A</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learn_w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.mvml.MVML" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="reference/api.html#multimodal.kernels.mkernel.MKernel" title="multimodal.kernels.mkernel.MKernel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MKernel</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RegressorMixin</span></code></p>
+<p>The MVML Classifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>lmbda</strong><span class="classifier">float regression_params lmbda (default = 0.1)  for basic regularization</span></dt><dd></dd>
+<dt><strong>eta</strong><span class="classifier">float regression_params eta (default = 1), first for basic regularization,</span></dt><dd><p>regularization of A (not necessary if A is not learned)</p>
+</dd>
+<dt><strong>kernel</strong><span class="classifier">list of str (default: “precomputed”) if kernel is as input of fit function set kernel to</span></dt><dd><p>“precomputed”
+list or str indicate the metrics used for each kernels
+list of pairwise kernel function name
+(default : “precomputed”) if kernel is as input of fit function set kernel to “precomputed”
+example : [‘rbf’, ‘additive_chi2’, ‘linear’ ] for function defined in as
+PAIRWISE_KERNEL_FUNCTIONS</p>
+</dd>
+<dt><strong>kernel_params</strong><span class="classifier">list of str default</span><span class="classifier">None) list of dictionaries for parameters of kernel [{‘gamma’:50}</span></dt><dd><p>list of dict of corresponding kernels params KERNEL_PARAMS</p>
+</dd>
+<dt><strong>nystrom_param: value between 0 and 1 indicating level of nyström approximation; 1 = no approximation</strong></dt><dd></dd>
+<dt><strong>learn_A</strong><span class="classifier">integer (default 1) choose if A is learned or not: 1 - yes (default);</span></dt><dd><p>2 - yes, sparse; 3 - no (MVML_Cov); 4 - no (MVML_I)</p>
+</dd>
+<dt><strong>learn_w</strong><span class="classifier">integer (default 0) where learn w is needed</span></dt><dd></dd>
+<dt><strong>precision</strong><span class="classifier">float (default</span><span class="classifier">1E-4) precision to stop algorithm</span></dt><dd></dd>
+<dt><strong>n_loops</strong><span class="classifier">(default 6) number of iterions</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.kernels.mvml</span><span class="w"> </span><span class="kn">import</span> <span class="n">MVML</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="p">[</span><span class="n">y</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># view 0: sepal data, view 1: petal data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MVML</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+<span class="go">{&#39;eta&#39;: 1, &#39;kernel&#39;: &#39;linear&#39;, &#39;kernel_params&#39;: None, &#39;learn_A&#39;: 1, &#39;learn_w&#39;: 0, &#39;lmbda&#39;: 0.1, &#39;n_loops&#39;: 6, &#39;nystrom_param&#39;: 1.0, &#39;precision&#39;: 0.0001}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MVML()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>lmbda</strong><span class="classifier">float regression_params lmbda (default = 0.1)</span></dt><dd></dd>
+<dt><strong>eta</strong><span class="classifier">float regression_params eta (default = 1)</span></dt><dd></dd>
+<dt><strong>regression_params</strong><span class="classifier">array/list of regression parameters</span></dt><dd></dd>
+<dt><strong>kernel</strong><span class="classifier">list or str indicate the metrics used for each kernels</span></dt><dd><p>list of pairwise kernel function name
+(default : “precomputed”)
+example : [‘rbf’, ‘additive_chi2’, ‘linear’ ] for function defined in as
+PAIRWISE_KERNEL_FUNCTIONS
+example kernel=[‘rbf’, ‘rbf’], for the first two views</p>
+</dd>
+<dt><strong>kernel_params: list of dict of corresponding kernels params KERNEL_PARAMS</strong></dt><dd></dd>
+<dt><strong>learn_A</strong><span class="classifier">1 where Learn matrix A is needded</span></dt><dd></dd>
+<dt><strong>learn_w</strong><span class="classifier">integer where learn w is needed</span></dt><dd></dd>
+<dt><strong>precision</strong><span class="classifier">float (default</span><span class="classifier">1E-4) precision to stop algorithm</span></dt><dd></dd>
+<dt><strong>n_loops</strong><span class="classifier">number of itterions</span></dt><dd></dd>
+<dt><strong>n_approx</strong><span class="classifier">number of samples in approximation, equals n if no approx.</span></dt><dd></dd>
+<dt><strong>classes_</strong><span class="classifier">array like unique label for classes</span></dt><dd></dd>
+<dt><strong>warning_message</strong><span class="classifier">dictionary with warning messages</span></dt><dd></dd>
+<dt><strong>X_</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">metriclearning.datasets.data_sample.Metriclearn_array</span></code> array of input sample</span></dt><dd></dd>
+<dt><strong>K_</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">metriclearning.datasets.data_sample.Metriclearn_array</span></code> array of processed kernels</span></dt><dd></dd>
+<dt><strong>y_</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).</p>
+</dd>
+<dt><strong>regression_</strong><span class="classifier">if the classifier is used as regression (default</span><span class="classifier">False)</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.mvml.MVML.decision_function">
+<span class="sig-name descname"><span class="pre">decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.mvml.MVML.decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the decision function of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{ array-like, sparse matrix},</span></dt><dd><p>shape = (n_samples, n_views * n_features)
+Multi-view input samples.
+maybe also MultimodalData</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">numpy.ndarray, shape = (n_samples, )</span></dt><dd><p>Decision function of the input samples.
+For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.mvml.MVML.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.mvml.MVML.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit the MVML classifier</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">- Metriclearn_array {array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><blockquote>
+<div><p>Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p>
+</div></blockquote>
+<p>or
+- Dictionary of {array like} with shape = (n_samples, n_features)  for multi-view</p>
+<blockquote>
+<div><p>for each view.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Array of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>{array like} with (n_samples, nviews *  n_features) with ‘views_ind’ diferent to ‘None’</p></li>
+</ul>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).
+array of length n_samples containing the classification/regression labels
+for training data</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code> .</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Returns self.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.mvml.MVML.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.mvml.MVML.predict" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">different formats are supported</span></dt><dd><ul class="simple">
+<li><p>Metriclearn_array {array-like, sparse matrix}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p></li>
+<li><p>Dictionary of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>Array of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>{array like} with (n_samples, nviews *  n_features) with ‘views_ind’ diferent to ‘None’</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.mvml.MVML.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.mvml.MVML.score" title="Permalink to this definition"></a></dt>
+<dd><p>Return the mean accuracy on the given test data and labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like} of shape = (n_samples, n_features)</span></dt><dd></dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.mvml.MVML.set_fit_request">
+<span class="sig-name descname"><span class="pre">set_fit_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="reference/api.html#multimodal.kernels.mvml.MVML" title="multimodal.kernels.mvml.MVML"><span class="pre">MVML</span></a></span></span><a class="headerlink" href="#multimodal.kernels.mvml.MVML.set_fit_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">fit</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>views_ind</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">views_ind</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.kernels">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-multimodal.kernels" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.kernels.MKL">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.kernels.</span></span><span class="sig-name descname"><span class="pre">MKL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lmbda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nystrom_param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_approx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MKL" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>, <a class="reference internal" href="reference/api.html#multimodal.kernels.mkernel.MKernel" title="multimodal.kernels.mkernel.MKernel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MKernel</span></code></a></p>
+<p>MKL Classifier for multiview learning</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>lmbda</strong><span class="classifier">float coeficient for combined kernels</span></dt><dd></dd>
+<dt><strong>nystrom_param</strong><span class="classifier">float (default</span><span class="classifier">1.0)</span></dt><dd><p>value between 0 and 1 indicating level of nyström approximation;
+1 = no approximation</p>
+</dd>
+<dt><strong>kernel</strong><span class="classifier">list of str (default: “precomputed”) if kernel is as input of fit function set kernel to</span></dt><dd><p>“precomputed”
+list or str indicate the metrics used for each kernels
+list of pairwise kernel function name
+(default : “precomputed”) if kernel is as input of fit function set kernel to “precomputed”
+example : [‘rbf’, ‘additive_chi2’, ‘linear’ ] for function defined in as
+PAIRWISE_KERNEL_FUNCTIONS</p>
+</dd>
+<dt><strong>kernel_params</strong><span class="classifier">list of str default</span><span class="classifier">None) list of dictionaries for parameters of kernel [{‘gamma’:50}</span></dt><dd><p>list of dict of corresponding kernels params KERNEL_PARAMS</p>
+</dd>
+<dt><strong>use_approx</strong><span class="classifier">(default</span><span class="classifier">True) to use approximation of m_param &lt; 1</span></dt><dd></dd>
+<dt><strong>n_loops</strong><span class="classifier">(default 50) number of iterions</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>lmbda</strong><span class="classifier">float coeficient for combined kernels</span></dt><dd></dd>
+<dt><strong>m_param</strong><span class="classifier">float (default</span><span class="classifier">1.0)</span></dt><dd><p>value between 0 and 1 indicating level of nyström approximation;
+1 = no approximation</p>
+</dd>
+<dt><strong>kernel</strong><span class="classifier">list or str indicate the metrics used for each kernels</span></dt><dd><p>list of pairwise kernel function name
+(default : “precomputed”)
+example : [‘rbf’, ‘additive_chi2’, ‘linear’ ] for function defined in as
+PAIRWISE_KERNEL_FUNCTIONS
+example kernel=[‘rbf’, ‘rbf’], for the first two views</p>
+</dd>
+<dt><strong>kernel_params: list of dict of corresponding kernels params KERNEL_PARAMS</strong></dt><dd></dd>
+<dt><strong>precision</strong><span class="classifier">float (default</span><span class="classifier">1E-4) precision to stop algorithm</span></dt><dd></dd>
+<dt><strong>n_loops</strong><span class="classifier">number of iterions</span></dt><dd></dd>
+<dt><strong>classes_</strong><span class="classifier">array like unique label for classes</span></dt><dd></dd>
+<dt><strong>X_</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">metriclearning.datasets.data_sample.Metriclearn_array</span></code> array of input sample</span></dt><dd></dd>
+<dt><strong>K_</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">metriclearning.datasets.data_sample.Metriclearn_array</span></code> array of processed kernels</span></dt><dd></dd>
+<dt><strong>y_</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).</p>
+</dd>
+<dt><strong>C</strong><span class="classifier">learning solution that is learned in MKL</span></dt><dd></dd>
+<dt><strong>weights</strong><span class="classifier">learned weight for combining the solutions of views, learned in</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MKL.decision_function">
+<span class="sig-name descname"><span class="pre">decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MKL.decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the decision function of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views {array like} with shape = (n_samples, n_features)  for multi-view</span></dt><dd><p>for each view.
+or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>
+or
+{array-like,}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">numpy.ndarray, shape = (n_samples, )</span></dt><dd><p>Decision function of the input samples.
+For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MKL.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MKL.fit" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">different formats are supported</span></dt><dd><ul class="simple">
+<li><p>Metriclearn_array {array-like, sparse matrix}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p></li>
+<li><p>Dictionary of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>Array of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>{array like} with (n_samples, nviews *  n_features) with ‘views_ind’ diferent to ‘None’</p></li>
+</ul>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).
+array of length n_samples containing the classification/regression labels
+for training data</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code>.</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Returns self.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MKL.learn_lpMKL">
+<span class="sig-name descname"><span class="pre">learn_lpMKL</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MKL.learn_lpMKL" title="Permalink to this definition"></a></dt>
+<dd><p>function of lpMKL learning</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt>return tuple (C, weights)</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MKL.lpMKL_predict">
+<span class="sig-name descname"><span class="pre">lpMKL_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MKL.lpMKL_predict" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">array-like test kernels precomputed array like</span></dt><dd></dd>
+<dt><strong>C</strong><span class="classifier">corresponding to  Confusion learned matrix</span></dt><dd></dd>
+<dt><strong>weights</strong><span class="classifier">learned weights</span></dt><dd></dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MKL.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MKL.predict" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views {array like} with shape = (n_samples, n_features)  for multi-view</span></dt><dd><p>for each view.
+or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>
+or
+{array-like,}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code>.</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MKL.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MKL.score" title="Permalink to this definition"></a></dt>
+<dd><p>Return the mean accuracy on the given test data and labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">dict dictionary with all views {array like} with shape = (n_samples, n_features)  for multi-view</span></dt><dd><p>for each view.
+or
+<cite>MultiModalData</cite> ,  <cite>MultiModalArray</cite>
+or
+{array-like,}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MKL.set_fit_request">
+<span class="sig-name descname"><span class="pre">set_fit_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="reference/api.html#multimodal.kernels.lpMKL.MKL" title="multimodal.kernels.lpMKL.MKL"><span class="pre">MKL</span></a></span></span><a class="headerlink" href="#multimodal.kernels.MKL.set_fit_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">fit</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>views_ind</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">views_ind</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.kernels.MVML">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.kernels.</span></span><span class="sig-name descname"><span class="pre">MVML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lmbda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nystrom_param</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'linear'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_params</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learn_A</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learn_w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_loops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MVML" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="reference/api.html#multimodal.kernels.mkernel.MKernel" title="multimodal.kernels.mkernel.MKernel"><code class="xref py py-class docutils literal notranslate"><span class="pre">MKernel</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">RegressorMixin</span></code></p>
+<p>The MVML Classifier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>lmbda</strong><span class="classifier">float regression_params lmbda (default = 0.1)  for basic regularization</span></dt><dd></dd>
+<dt><strong>eta</strong><span class="classifier">float regression_params eta (default = 1), first for basic regularization,</span></dt><dd><p>regularization of A (not necessary if A is not learned)</p>
+</dd>
+<dt><strong>kernel</strong><span class="classifier">list of str (default: “precomputed”) if kernel is as input of fit function set kernel to</span></dt><dd><p>“precomputed”
+list or str indicate the metrics used for each kernels
+list of pairwise kernel function name
+(default : “precomputed”) if kernel is as input of fit function set kernel to “precomputed”
+example : [‘rbf’, ‘additive_chi2’, ‘linear’ ] for function defined in as
+PAIRWISE_KERNEL_FUNCTIONS</p>
+</dd>
+<dt><strong>kernel_params</strong><span class="classifier">list of str default</span><span class="classifier">None) list of dictionaries for parameters of kernel [{‘gamma’:50}</span></dt><dd><p>list of dict of corresponding kernels params KERNEL_PARAMS</p>
+</dd>
+<dt><strong>nystrom_param: value between 0 and 1 indicating level of nyström approximation; 1 = no approximation</strong></dt><dd></dd>
+<dt><strong>learn_A</strong><span class="classifier">integer (default 1) choose if A is learned or not: 1 - yes (default);</span></dt><dd><p>2 - yes, sparse; 3 - no (MVML_Cov); 4 - no (MVML_I)</p>
+</dd>
+<dt><strong>learn_w</strong><span class="classifier">integer (default 0) where learn w is needed</span></dt><dd></dd>
+<dt><strong>precision</strong><span class="classifier">float (default</span><span class="classifier">1E-4) precision to stop algorithm</span></dt><dd></dd>
+<dt><strong>n_loops</strong><span class="classifier">(default 6) number of iterions</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.kernels.mvml</span><span class="w"> </span><span class="kn">import</span> <span class="n">MVML</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_iris</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="p">[</span><span class="n">y</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">views_ind</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># view 0: sepal data, view 1: petal data</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span> <span class="o">=</span> <span class="n">MVML</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">get_params</span><span class="p">()</span>
+<span class="go">{&#39;eta&#39;: 1, &#39;kernel&#39;: &#39;linear&#39;, &#39;kernel_params&#39;: None, &#39;learn_A&#39;: 1, &#39;learn_w&#39;: 0, &#39;lmbda&#39;: 0.1, &#39;n_loops&#39;: 6, &#39;nystrom_param&#39;: 1.0, &#39;precision&#39;: 0.0001}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>  
+<span class="go">MVML()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span> <span class="mf">5.</span><span class="p">,</span>  <span class="mf">3.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">,</span>  <span class="mf">1.</span><span class="p">]]))</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>lmbda</strong><span class="classifier">float regression_params lmbda (default = 0.1)</span></dt><dd></dd>
+<dt><strong>eta</strong><span class="classifier">float regression_params eta (default = 1)</span></dt><dd></dd>
+<dt><strong>regression_params</strong><span class="classifier">array/list of regression parameters</span></dt><dd></dd>
+<dt><strong>kernel</strong><span class="classifier">list or str indicate the metrics used for each kernels</span></dt><dd><p>list of pairwise kernel function name
+(default : “precomputed”)
+example : [‘rbf’, ‘additive_chi2’, ‘linear’ ] for function defined in as
+PAIRWISE_KERNEL_FUNCTIONS
+example kernel=[‘rbf’, ‘rbf’], for the first two views</p>
+</dd>
+<dt><strong>kernel_params: list of dict of corresponding kernels params KERNEL_PARAMS</strong></dt><dd></dd>
+<dt><strong>learn_A</strong><span class="classifier">1 where Learn matrix A is needded</span></dt><dd></dd>
+<dt><strong>learn_w</strong><span class="classifier">integer where learn w is needed</span></dt><dd></dd>
+<dt><strong>precision</strong><span class="classifier">float (default</span><span class="classifier">1E-4) precision to stop algorithm</span></dt><dd></dd>
+<dt><strong>n_loops</strong><span class="classifier">number of itterions</span></dt><dd></dd>
+<dt><strong>n_approx</strong><span class="classifier">number of samples in approximation, equals n if no approx.</span></dt><dd></dd>
+<dt><strong>classes_</strong><span class="classifier">array like unique label for classes</span></dt><dd></dd>
+<dt><strong>warning_message</strong><span class="classifier">dictionary with warning messages</span></dt><dd></dd>
+<dt><strong>X_</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">metriclearning.datasets.data_sample.Metriclearn_array</span></code> array of input sample</span></dt><dd></dd>
+<dt><strong>K_</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">metriclearning.datasets.data_sample.Metriclearn_array</span></code> array of processed kernels</span></dt><dd></dd>
+<dt><strong>y_</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).</p>
+</dd>
+<dt><strong>regression_</strong><span class="classifier">if the classifier is used as regression (default</span><span class="classifier">False)</span></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MVML.decision_function">
+<span class="sig-name descname"><span class="pre">decision_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MVML.decision_function" title="Permalink to this definition"></a></dt>
+<dd><p>Compute the decision function of X.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{ array-like, sparse matrix},</span></dt><dd><p>shape = (n_samples, n_views * n_features)
+Multi-view input samples.
+maybe also MultimodalData</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>dec_fun</strong><span class="classifier">numpy.ndarray, shape = (n_samples, )</span></dt><dd><p>Decision function of the input samples.
+For binary classification,
+values &lt;=0 mean classification in the first class in <code class="docutils literal notranslate"><span class="pre">classes_</span></code>
+and values &gt;0 mean classification in the second class in
+<code class="docutils literal notranslate"><span class="pre">classes_</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MVML.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MVML.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit the MVML classifier</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">- Metriclearn_array {array-like, sparse matrix}, shape = (n_samples, n_features)</span></dt><dd><blockquote>
+<div><p>Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p>
+</div></blockquote>
+<p>or
+- Dictionary of {array like} with shape = (n_samples, n_features)  for multi-view</p>
+<blockquote>
+<div><p>for each view.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Array of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>{array like} with (n_samples, nviews *  n_features) with ‘views_ind’ diferent to ‘None’</p></li>
+</ul>
+</dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>Target values (class labels).
+array of length n_samples containing the classification/regression labels
+for training data</p>
+</dd>
+<dt><strong>views_ind</strong><span class="classifier">array-like (default=[0, n_features//2, n_features])</span></dt><dd><p>Paramater specifying how to extract the data views from X:</p>
+<ul>
+<li><p>views_ind is a 1-D array of sorted integers, the entries
+indicate the limits of the slices used to extract the views,
+where view <code class="docutils literal notranslate"><span class="pre">n</span></code> is given by
+<code class="docutils literal notranslate"><span class="pre">X[:,</span> <span class="pre">views_ind[n]:views_ind[n+1]]</span></code> .</p>
+<p>With this convention each view is therefore a view (in the NumPy
+sense) of X and no copy of the data is done.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Returns self.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MVML.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MVML.predict" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">different formats are supported</span></dt><dd><ul class="simple">
+<li><p>Metriclearn_array {array-like, sparse matrix}, shape = (n_samples, n_features)
+Training multi-view input samples. can be also Kernel where attibute ‘kernel’
+is set to precompute “precomputed”</p></li>
+<li><p>Dictionary of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>Array of {array like} with shape = (n_samples, n_features)  for multi-view
+for each view.</p></li>
+<li><p>{array like} with (n_samples, nviews *  n_features) with ‘views_ind’ diferent to ‘None’</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>y</strong><span class="classifier">numpy.ndarray, shape = (n_samples,)</span></dt><dd><p>Predicted classes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MVML.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.kernels.MVML.score" title="Permalink to this definition"></a></dt>
+<dd><p>Return the mean accuracy on the given test data and labels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>X</strong><span class="classifier">{array-like} of shape = (n_samples, n_features)</span></dt><dd></dd>
+<dt><strong>y</strong><span class="classifier">array-like, shape = (n_samples,)</span></dt><dd><p>True labels for X.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>score</strong><span class="classifier">float</span></dt><dd><p>Mean accuracy of self.predict(X) wrt. y.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.kernels.MVML.set_fit_request">
+<span class="sig-name descname"><span class="pre">set_fit_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">views_ind</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="reference/api.html#multimodal.kernels.mvml.MVML" title="multimodal.kernels.mvml.MVML"><span class="pre">MVML</span></a></span></span><a class="headerlink" href="#multimodal.kernels.MVML.set_fit_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">fit</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>views_ind</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">views_ind</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">fit</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2026, LIS UMR 7020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

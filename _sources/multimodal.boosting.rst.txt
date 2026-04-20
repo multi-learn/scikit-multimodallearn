@@ -1,0 +1,37 @@
+multimodal.boosting package
+===========================
+
+Submodules
+----------
+
+multimodal.boosting.boost module
+--------------------------------
+
+.. automodule:: multimodal.boosting.boost
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.boosting.combo module
+--------------------------------
+
+.. automodule:: multimodal.boosting.combo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.boosting.mumbo module
+--------------------------------
+
+.. automodule:: multimodal.boosting.mumbo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: multimodal.boosting
+   :members:
+   :undoc-members:
+   :show-inheritance:

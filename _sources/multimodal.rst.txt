@@ -1,0 +1,21 @@
+multimodal package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   multimodal.boosting
+   multimodal.datasets
+   multimodal.kernels
+   multimodal.tests
+
+Module contents
+---------------
+
+.. automodule:: multimodal
+   :members:
+   :undoc-members:
+   :show-inheritance:

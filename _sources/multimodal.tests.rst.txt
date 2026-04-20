@@ -1,0 +1,62 @@
+multimodal.tests package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   multimodal.tests.data
+   multimodal.tests.datasets
+
+Submodules
+----------
+
+multimodal.tests.test\_combo module
+-----------------------------------
+
+.. automodule:: multimodal.tests.test_combo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.tests.test\_data\_sample module
+------------------------------------------
+
+.. automodule:: multimodal.tests.test_data_sample
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.tests.test\_mkl module
+---------------------------------
+
+.. automodule:: multimodal.tests.test_mkl
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.tests.test\_mumbo module
+-----------------------------------
+
+.. automodule:: multimodal.tests.test_mumbo
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.tests.test\_mvml module
+----------------------------------
+
+.. automodule:: multimodal.tests.test_mvml
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: multimodal.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:

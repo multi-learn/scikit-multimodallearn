@@ -1,0 +1,37 @@
+multimodal.kernels package
+==========================
+
+Submodules
+----------
+
+multimodal.kernels.lpMKL module
+-------------------------------
+
+.. automodule:: multimodal.kernels.lpMKL
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.kernels.mkernel module
+---------------------------------
+
+.. automodule:: multimodal.kernels.mkernel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+multimodal.kernels.mvml module
+------------------------------
+
+.. automodule:: multimodal.kernels.mvml
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: multimodal.kernels
+   :members:
+   :undoc-members:
+   :show-inheritance:

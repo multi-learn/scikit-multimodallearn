@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MuCombo 3 views, 3 classes example &mdash; scikit-multimodallearn 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="MuMBo Examples" href="../mumbo/index.html" />
+    <link rel="prev" title="MuCombo 2 views, 2 classes example" href="plot_combo_2_views_2_classes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            scikit-multimodallearn
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../install_devel.html">Installation and development</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Multimodal Examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mucumbo-examples">MuCuMBo Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mumbo-examples">MuMBo Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#mvml-examples">MVML Examples</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#use-case-examples-on-digit">Use Case Examples on Digit</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">MuCuMBo Examples</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="plot_combo_2_views_2_classes.html">MuCombo 2 views, 2 classes example</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">MuCombo 3 views, 3 classes example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../mumbo/index.html">MuMBo Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mvml/index.html">MVML Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usecase/index.html">Use Case Examples on Digit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../times.html">Computation times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">scikit-multimodallearn</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Multimodal Examples</a></li>
+          <li class="breadcrumb-item"><a href="index.html">MuCuMBo Examples</a></li>
+      <li class="breadcrumb-item active">MuCombo 3 views, 3 classes example</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/tutorial/auto_examples/combo/plot_combo_3_views_3_classes.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-tutorial-auto-examples-combo-plot-combo-3-views-3-classes-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
+</div>
+<section class="sphx-glr-example-title" id="mucombo-3-views-3-classes-example">
+<span id="sphx-glr-tutorial-auto-examples-combo-plot-combo-3-views-3-classes-py"></span><h1>MuCombo 3 views, 3 classes example<a class="headerlink" href="#mucombo-3-views-3-classes-example" title="Permalink to this heading"></a></h1>
+<p>In this toy example, we generate data from three classes, split between three
+two-dimensional views.</p>
+<p>For each view, the data are generated so that the points for two classes are
+well seperated, while the points for the third class are not seperated with
+the two other classes. That means that, taken separately, none of the single
+views allows for a good classification of the data.</p>
+<p>Nevertheless, the MuCoMbo algorithm take adavantage of the complementarity of
+the views to rightly classify the points.</p>
+<img src="../../../_images/sphx_glr_plot_combo_3_views_3_classes_001.png" srcset="../../../_images/sphx_glr_plot_combo_3_views_3_classes_001.png" alt="Representation of the data, View 0, View 1, View 2" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>After 4 iterations, the MuCuMBo classifier reaches exact classification for the
+learning samples:
+  - iteration 1, score: 0.6666666666666666
+  - iteration 2, score: 0.6666666666666666
+  - iteration 3, score: 1.0
+
+The resulting MuCuMBo classifier uses four sub-classifiers that are wheighted
+using the following weights:
+  estimator weights alpha: [[0.54930614 0.54930614 0.54930614]]
+
+The first figure displays the data, splitting the representation between the
+three views.
+
+The second figure displays the classification results for the sub-classifiers
+on the learning sample data.
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.boosting.combo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MuComboClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">lim</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate random data in a rectangle&quot;&quot;&quot;</span>
+    <span class="n">lim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">lim</span><span class="p">)</span>
+    <span class="n">n_features</span> <span class="o">=</span> <span class="n">lim</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span><span class="p">))</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">(</span><span class="n">lim</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">lim</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">data</span> <span class="o">+</span> <span class="n">lim</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+
+<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">300</span>
+
+<span class="n">view_0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]),</span>
+                         <span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]),</span>
+                         <span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]])))</span>
+
+<span class="n">view_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]),</span>
+                         <span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]),</span>
+                         <span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]])))</span>
+
+<span class="n">view_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]),</span>
+                         <span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]),</span>
+                         <span class="n">generate_data</span><span class="p">(</span><span class="n">n_samples</span><span class="p">,</span> <span class="p">[[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]])))</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">view_0</span><span class="p">,</span> <span class="n">view_1</span><span class="p">,</span> <span class="n">view_2</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+<span class="n">y</span><span class="p">[</span><span class="n">n_samples</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">n_samples</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">n_samples</span><span class="p">:]</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">views_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">MuComboClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="n">n_estimators</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">views_ind</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">After 4 iterations, the MuCuMBo classifier reaches exact &#39;</span>
+      <span class="s1">&#39;classification for the</span><span class="se">\n</span><span class="s1">learning samples:&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ind</span><span class="p">,</span> <span class="n">score</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">staged_score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;  - iteration </span><span class="si">{}</span><span class="s1">, score: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">score</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">The resulting MuCuMBo classifier uses four sub-classifiers that are &#39;</span>
+      <span class="s1">&#39;wheighted</span><span class="se">\n</span><span class="s1">using the following weights:</span><span class="se">\n</span><span class="s1">&#39;</span>
+      <span class="s1">&#39;  estimator weights alpha: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">estimator_weights_alpha_</span><span class="p">))</span>
+
+<span class="c1"># print(&#39;\nThe first sub-classifier uses the data of view 0 to compute &#39;</span>
+<span class="c1">#       &#39;its classification\nresults, the second and third sub-classifiers use &#39;</span>
+<span class="c1">#       &#39;the data of view 1, while the\nfourth one uses the data of &#39;</span>
+<span class="c1">#       &#39;view 2:\n&#39;</span>
+<span class="c1">#       &#39;  best views: {}&#39;. format(clf.best_views_))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">The first figure displays the data, splitting the representation &#39;</span>
+      <span class="s1">&#39;between the</span><span class="se">\n</span><span class="s1">three views.&#39;</span><span class="p">)</span>
+
+<span class="n">styles</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;.b&#39;</span><span class="p">,</span> <span class="s1">&#39;.r&#39;</span><span class="p">,</span> <span class="s1">&#39;.g&#39;</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">12.</span><span class="p">,</span> <span class="mf">11.</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Representation of the data&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ind_view</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ind_view</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;View </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ind_view</span><span class="p">))</span>
+    <span class="n">ind_feature</span> <span class="o">=</span> <span class="n">ind_view</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="k">for</span> <span class="n">ind_class</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">ind_samples</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">ind_class</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">ind_samples</span><span class="p">,</span> <span class="n">ind_feature</span><span class="p">],</span>
+                <span class="n">X</span><span class="p">[</span><span class="n">ind_samples</span><span class="p">,</span> <span class="n">ind_feature</span> <span class="o">+</span> <span class="mi">1</span><span class="p">],</span>
+                <span class="n">styles</span><span class="p">[</span><span class="n">ind_class</span><span class="p">],</span>
+                <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Class </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ind_class</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span> <span class="n">framealpha</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">The second figure displays the classification results for the &#39;</span>
+      <span class="s1">&#39;sub-classifiers</span><span class="se">\n</span><span class="s1">on the learning sample data.</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># fig = plt.figure(figsize=(14., 11.))</span>
+<span class="c1"># fig.suptitle(&#39;Classification results on the learning data for the &#39;</span>
+<span class="c1">#              &#39;sub-classifiers&#39;, size=16)</span>
+<span class="c1"># for ind_estimator in range(n_estimators):</span>
+<span class="c1">#     best_view = clf.best_views_[ind_estimator]</span>
+<span class="c1">#     y_pred = clf.estimators_[ind_estimator].predict(</span>
+<span class="c1">#         X[:, 2*best_view:2*best_view+2])</span>
+<span class="c1">#     background_color = (1.0, 1.0, 0.9)</span>
+<span class="c1">#     for ind_view in range(3):</span>
+<span class="c1">#         ax = plt.subplot(3, 4, ind_estimator + 4*ind_view + 1)</span>
+<span class="c1">#         if ind_view == best_view:</span>
+<span class="c1">#             ax.set_facecolor(background_color)</span>
+<span class="c1">#         ax.set_title(</span>
+<span class="c1">#             &#39;Sub-classifier {} - View {}&#39;.format(ind_estimator, ind_view))</span>
+<span class="c1">#         ind_feature = ind_view * 2</span>
+<span class="c1">#         for ind_class in range(3):</span>
+<span class="c1">#             ind_samples = (y_pred == ind_class)</span>
+<span class="c1">#             ax.plot(X[ind_samples, ind_feature],</span>
+<span class="c1">#                     X[ind_samples, ind_feature + 1],</span>
+<span class="c1">#                     styles[ind_class],</span>
+<span class="c1">#                     label=&#39;Class {}&#39;.format(ind_class))</span>
+<span class="c1">#         ax.legend(title=&#39;Predicted class:&#39;, loc=&#39;upper left&#39;, framealpha=0.9)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.209 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-auto-examples-combo-plot-combo-3-views-3-classes-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/a359edf190e139d0de27ff59dc636b57/plot_combo_3_views_3_classes.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_combo_3_views_3_classes.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/a141b9fc2500fa20d6de917fd0c84305/plot_combo_3_views_3_classes.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_combo_3_views_3_classes.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/99bbd3e28dc62afbba88e2808180ee3c/plot_combo_3_views_3_classes.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_combo_3_views_3_classes.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plot_combo_2_views_2_classes.html" class="btn btn-neutral float-left" title="MuCombo 2 views, 2 classes example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../mumbo/index.html" class="btn btn-neutral float-right" title="MuMBo Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2026, LIS UMR 7020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

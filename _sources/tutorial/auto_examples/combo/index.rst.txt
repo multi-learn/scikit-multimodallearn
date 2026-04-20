@@ -1,0 +1,67 @@
+
+
+.. _sphx_glr_tutorial_auto_examples_combo:
+
+
+MuCuMBo Examples
+----------------
+
+The following toy examples illustrate how the MuCuMBo algorithm exploits
+cooperation between views for classification.
+
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this toy example, we generate data from two classes, split between two two-dimensional views.">
+
+.. only:: html
+
+  .. image:: /tutorial/auto_examples/combo/images/thumb/sphx_glr_plot_combo_2_views_2_classes_thumb.png
+    :alt:
+
+  :doc:`/tutorial/auto_examples/combo/plot_combo_2_views_2_classes`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">MuCombo 2 views, 2 classes example</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="In this toy example, we generate data from three classes, split between three two-dimensional views.">
+
+.. only:: html
+
+  .. image:: /tutorial/auto_examples/combo/images/thumb/sphx_glr_plot_combo_3_views_3_classes_thumb.png
+    :alt:
+
+  :doc:`/tutorial/auto_examples/combo/plot_combo_3_views_3_classes`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">MuCombo 3 views, 3 classes example</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /tutorial/auto_examples/combo/plot_combo_2_views_2_classes
+   /tutorial/auto_examples/combo/plot_combo_3_views_3_classes
+

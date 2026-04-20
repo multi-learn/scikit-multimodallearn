@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>multimodal.tests package &mdash; scikit-multimodallearn 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css" />
+      <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            scikit-multimodallearn
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/install_devel.html">Installation and development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/auto_examples/index.html">Multimodal Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/times.html">Computation times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial/credits.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scikit-multimodallearn</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">multimodal.tests package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/multimodal.tests.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multimodal-tests-package">
+<h1>multimodal.tests package<a class="headerlink" href="#multimodal-tests-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="multimodal.tests.data.html">multimodal.tests.data package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multimodal.tests.data.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multimodal.tests.data.html#module-multimodal.tests.data.get_dataset_path">multimodal.tests.data.get_dataset_path module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multimodal.tests.data.html#module-multimodal.tests.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="multimodal.tests.datasets.html">multimodal.tests.datasets package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multimodal.tests.datasets.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multimodal.tests.datasets.html#module-multimodal.tests.datasets.get_dataset_path">multimodal.tests.datasets.get_dataset_path module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multimodal.tests.datasets.html#module-multimodal.tests.datasets">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-multimodal.tests.test_combo">
+<span id="multimodal-tests-test-combo-module"></span><h2>multimodal.tests.test_combo module<a class="headerlink" href="#module-multimodal.tests.test_combo" title="Permalink to this heading"></a></h2>
+<p>Testing for the mumbo module.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.NoSampleWeightLasso">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.tests.test_combo.</span></span><span class="sig-name descname"><span class="pre">NoSampleWeightLasso</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_intercept</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precompute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">copy_X</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">warm_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">positive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cyclic'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.NoSampleWeightLasso" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Lasso</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.NoSampleWeightLasso.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_input</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.NoSampleWeightLasso.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Fit model with coordinate descent.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>X</strong><span class="classifier">{ndarray, sparse matrix, sparse array} of (n_samples, n_features)</span></dt><dd><p>Data.</p>
+<p>Note that large sparse matrices and arrays requiring <cite>int64</cite>
+indices are not accepted.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">ndarray of shape (n_samples,) or (n_samples, n_targets)</span></dt><dd><p>Target. Will be cast to X’s dtype if necessary.</p>
+</dd>
+<dt><strong>sample_weight</strong><span class="classifier">float or array-like of shape (n_samples,), default=None</span></dt><dd><p>Sample weights. Internally, the <cite>sample_weight</cite> vector will be
+rescaled to sum to <cite>n_samples</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 0.23.</span></p>
+</div>
+</dd>
+<dt><strong>check_input</strong><span class="classifier">bool, default=True</span></dt><dd><p>Allow to bypass several input checking.
+Don’t use this parameter unless you know what you do.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>Fitted estimator.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Coordinate descent is an algorithm that considers each column of
+data at a time hence it will automatically convert the X input
+as a Fortran-contiguous numpy array if necessary.</p>
+<p>To avoid memory re-allocation it is advised to allocate the
+initial data in memory directly using that format.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.NoSampleWeightLasso.set_score_request">
+<span class="sig-name descname"><span class="pre">set_score_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_weight</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'$UNCHANGED$'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#multimodal.tests.test_combo.NoSampleWeightLasso" title="multimodal.tests.test_combo.NoSampleWeightLasso"><span class="pre">NoSampleWeightLasso</span></a></span></span><a class="headerlink" href="#multimodal.tests.test_combo.NoSampleWeightLasso.set_score_request" title="Permalink to this definition"></a></dt>
+<dd><p>Configure whether metadata should be requested to be passed to the <code class="docutils literal notranslate"><span class="pre">score</span></code> method.</p>
+<p>Note that this method is only relevant when this estimator is used as a
+sub-estimator within a <span class="xref std std-term">meta-estimator</span> and metadata routing is enabled
+with <code class="docutils literal notranslate"><span class="pre">enable_metadata_routing=True</span></code> (see <code class="xref py py-func docutils literal notranslate"><span class="pre">sklearn.set_config()</span></code>).
+Please check the <span class="xref std std-ref">User Guide</span> on how the routing
+mechanism works.</p>
+<p>The options for each parameter are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: metadata is requested, and passed to <code class="docutils literal notranslate"><span class="pre">score</span></code> if provided. The request is ignored if metadata is not provided.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: metadata is not requested and the meta-estimator will not pass it to <code class="docutils literal notranslate"><span class="pre">score</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">None</span></code>: metadata is not requested, and the meta-estimator will raise an error if the user provides it.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code>: metadata should be passed to the meta-estimator with this given alias instead of the original name.</p></li>
+</ul>
+<p>The default (<code class="docutils literal notranslate"><span class="pre">sklearn.utils.metadata_routing.UNCHANGED</span></code>) retains the
+existing request. This allows you to change the request for some
+parameters and not others.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">New in version 1.3.</span></p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>sample_weight</strong><span class="classifier">str, True, False, or None,                     default=sklearn.utils.metadata_routing.UNCHANGED</span></dt><dd><p>Metadata routing for <code class="docutils literal notranslate"><span class="pre">sample_weight</span></code> parameter in <code class="docutils literal notranslate"><span class="pre">score</span></code>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>self</strong><span class="classifier">object</span></dt><dd><p>The updated object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.tests.test_combo.</span></span><span class="sig-name descname"><span class="pre">TestMuComboClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.setUpClass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setUpClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.setUpClass" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_class_variation">
+<span class="sig-name descname"><span class="pre">test_class_variation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_class_variation" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_classifier">
+<span class="sig-name descname"><span class="pre">test_classifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_classifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_compute_alphas">
+<span class="sig-name descname"><span class="pre">test_compute_alphas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_compute_alphas" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_compute_cost">
+<span class="sig-name descname"><span class="pre">test_compute_cost</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_compute_cost" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_compute_dist">
+<span class="sig-name descname"><span class="pre">test_compute_dist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_compute_dist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_compute_edges">
+<span class="sig-name descname"><span class="pre">test_compute_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_compute_edges" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_decision_function">
+<span class="sig-name descname"><span class="pre">test_decision_function</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_decision_function" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_estimator_score">
+<span class="sig-name descname"><span class="pre">test_estimator_score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_estimator_score" title="Permalink to this definition"></a></dt>
+<dd><p>Test different base estimators.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_fit_views_ind">
+<span class="sig-name descname"><span class="pre">test_fit_views_ind</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_fit_views_ind" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_gridsearch">
+<span class="sig-name descname"><span class="pre">test_gridsearch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_gridsearch" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_indicatrice">
+<span class="sig-name descname"><span class="pre">test_indicatrice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_indicatrice" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_init">
+<span class="sig-name descname"><span class="pre">test_init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_init" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_init_var">
+<span class="sig-name descname"><span class="pre">test_init_var</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_init_var" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_predict">
+<span class="sig-name descname"><span class="pre">test_predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_predict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_prepare_beta_solver">
+<span class="sig-name descname"><span class="pre">test_prepare_beta_solver</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_prepare_beta_solver" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_simple_predict">
+<span class="sig-name descname"><span class="pre">test_simple_predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_simple_predict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_solver_compute_betas">
+<span class="sig-name descname"><span class="pre">test_solver_compute_betas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_solver_compute_betas" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_solver_cp_forbeta">
+<span class="sig-name descname"><span class="pre">test_solver_cp_forbeta</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_solver_cp_forbeta" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_combo.TestMuComboClassifier.test_staged_methods">
+<span class="sig-name descname"><span class="pre">test_staged_methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_combo.TestMuComboClassifier.test_staged_methods" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.tests.test_data_sample">
+<span id="multimodal-tests-test-data-sample-module"></span><h2>multimodal.tests.test_data_sample module<a class="headerlink" href="#module-multimodal.tests.test_data_sample" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.tests.test_data_sample.UnitaryTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.tests.test_data_sample.</span></span><span class="sig-name descname"><span class="pre">UnitaryTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_data_sample.UnitaryTest" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_data_sample.UnitaryTest.setUpClass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setUpClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_data_sample.UnitaryTest.setUpClass" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_data_sample.UnitaryTest.testGet_view">
+<span class="sig-name descname"><span class="pre">testGet_view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_data_sample.UnitaryTest.testGet_view" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_data_sample.UnitaryTest.test_init_Array">
+<span class="sig-name descname"><span class="pre">test_init_Array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_data_sample.UnitaryTest.test_init_Array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_data_sample.UnitaryTest.test_init_Multimodal_array">
+<span class="sig-name descname"><span class="pre">test_init_Multimodal_array</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_data_sample.UnitaryTest.test_init_Multimodal_array" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_data_sample.UnitaryTest.test_view_functions">
+<span class="sig-name descname"><span class="pre">test_view_functions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_data_sample.UnitaryTest.test_view_functions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.tests.test_mkl">
+<span id="multimodal-tests-test-mkl-module"></span><h2>multimodal.tests.test_mkl module<a class="headerlink" href="#module-multimodal.tests.test_mkl" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.tests.test_mkl.MKLTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.tests.test_mkl.</span></span><span class="sig-name descname"><span class="pre">MKLTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mkl.MKLTest" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mkl.MKLTest.setUpClass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setUpClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mkl.MKLTest.setUpClass" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mkl.MKLTest.testFitMKLDict">
+<span class="sig-name descname"><span class="pre">testFitMKLDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mkl.MKLTest.testFitMKLDict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mkl.MKLTest.testFitMKLDictNLoop">
+<span class="sig-name descname"><span class="pre">testFitMKLDictNLoop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mkl.MKLTest.testFitMKLDictNLoop" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mkl.MKLTest.testFitMKLMetricPrecision">
+<span class="sig-name descname"><span class="pre">testFitMKLMetricPrecision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mkl.MKLTest.testFitMKLMetricPrecision" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mkl.MKLTest.testFitMKLMetricPrecision2">
+<span class="sig-name descname"><span class="pre">testFitMKLMetricPrecision2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mkl.MKLTest.testFitMKLMetricPrecision2" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mkl.MKLTest.testInitMKL">
+<span class="sig-name descname"><span class="pre">testInitMKL</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mkl.MKLTest.testInitMKL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mkl.MKLTest.testPredictMVML_witoutFit">
+<span class="sig-name descname"><span class="pre">testPredictMVML_witoutFit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mkl.MKLTest.testPredictMVML_witoutFit" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.tests.test_mumbo">
+<span id="multimodal-tests-test-mumbo-module"></span><h2>multimodal.tests.test_mumbo module<a class="headerlink" href="#module-multimodal.tests.test_mumbo" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.tests.test_mumbo.</span></span><span class="sig-name descname"><span class="pre">TestMumboClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.setUpClass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setUpClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.setUpClass" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_algo_options">
+<span class="sig-name descname"><span class="pre">test_algo_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_algo_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_classifier">
+<span class="sig-name descname"><span class="pre">test_classifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_classifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_alphas">
+<span class="sig-name descname"><span class="pre">test_compute_alphas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_alphas" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_coop_coef">
+<span class="sig-name descname"><span class="pre">test_compute_coop_coef</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_coop_coef" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_cost">
+<span class="sig-name descname"><span class="pre">test_compute_cost</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_cost" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_cost_global">
+<span class="sig-name descname"><span class="pre">test_compute_cost_global</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_cost_global" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_dist">
+<span class="sig-name descname"><span class="pre">test_compute_dist</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_dist" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_edge_global">
+<span class="sig-name descname"><span class="pre">test_compute_edge_global</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_edge_global" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_edges">
+<span class="sig-name descname"><span class="pre">test_compute_edges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_compute_edges" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_decision_function_arg">
+<span class="sig-name descname"><span class="pre">test_decision_function_arg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_decision_function_arg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_estimator">
+<span class="sig-name descname"><span class="pre">test_estimator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_estimator" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_fit_arg">
+<span class="sig-name descname"><span class="pre">test_fit_arg</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_fit_arg" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_generated_examples">
+<span class="sig-name descname"><span class="pre">test_generated_examples</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_generated_examples" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_gridsearch">
+<span class="sig-name descname"><span class="pre">test_gridsearch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_gridsearch" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_init_var">
+<span class="sig-name descname"><span class="pre">test_init_var</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_init_var" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_iris">
+<span class="sig-name descname"><span class="pre">test_iris</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_iris" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_limit_cases">
+<span class="sig-name descname"><span class="pre">test_limit_cases</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_limit_cases" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_pickle">
+<span class="sig-name descname"><span class="pre">test_pickle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_pickle" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_simple_examples">
+<span class="sig-name descname"><span class="pre">test_simple_examples</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_simple_examples" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_sparse">
+<span class="sig-name descname"><span class="pre">test_sparse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_sparse" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_sparse_classification">
+<span class="sig-name descname"><span class="pre">test_sparse_classification</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_sparse_classification" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_staged_methods">
+<span class="sig-name descname"><span class="pre">test_staged_methods</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_staged_methods" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mumbo.TestMumboClassifier.test_validate_X_predict">
+<span class="sig-name descname"><span class="pre">test_validate_X_predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mumbo.TestMumboClassifier.test_validate_X_predict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.tests.test_mvml">
+<span id="multimodal-tests-test-mvml-module"></span><h2>multimodal.tests.test_mvml module<a class="headerlink" href="#module-multimodal.tests.test_mvml" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">multimodal.tests.test_mvml.</span></span><span class="sig-name descname"><span class="pre">MVMLTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.setUpClass">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">setUpClass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.setUpClass" title="Permalink to this definition"></a></dt>
+<dd><p>Hook method for setting up class fixture before running tests in the class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLArray_1d">
+<span class="sig-name descname"><span class="pre">testFitMVMLArray_1d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLArray_1d" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLArray_2d">
+<span class="sig-name descname"><span class="pre">testFitMVMLArray_2d</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLArray_2d" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLDict">
+<span class="sig-name descname"><span class="pre">testFitMVMLDict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLDict" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLDictNLoop">
+<span class="sig-name descname"><span class="pre">testFitMVMLDictNLoop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLDictNLoop" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric">
+<span class="sig-name descname"><span class="pre">testFitMVMLMetric</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric_PredictA1">
+<span class="sig-name descname"><span class="pre">testFitMVMLMetric_PredictA1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric_PredictA1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric_PredictA2">
+<span class="sig-name descname"><span class="pre">testFitMVMLMetric_PredictA2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric_PredictA2" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric_learA3">
+<span class="sig-name descname"><span class="pre">testFitMVMLMetric_learA3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric_learA3" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric_learA4">
+<span class="sig-name descname"><span class="pre">testFitMVMLMetric_learA4</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLMetric_learA4" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLPrecision">
+<span class="sig-name descname"><span class="pre">testFitMVMLPrecision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLPrecision" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLRegression">
+<span class="sig-name descname"><span class="pre">testFitMVMLRegression</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLRegression" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testFitMVMLSparesArray">
+<span class="sig-name descname"><span class="pre">testFitMVMLSparesArray</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testFitMVMLSparesArray" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testInitMVML">
+<span class="sig-name descname"><span class="pre">testInitMVML</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testInitMVML" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testPredictMVML">
+<span class="sig-name descname"><span class="pre">testPredictMVML</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testPredictMVML" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testPredictMVMLKernel">
+<span class="sig-name descname"><span class="pre">testPredictMVMLKernel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testPredictMVMLKernel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.testPredictMVML_witoutFit">
+<span class="sig-name descname"><span class="pre">testPredictMVML_witoutFit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.testPredictMVML_witoutFit" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.test_check_kernel">
+<span class="sig-name descname"><span class="pre">test_check_kernel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.test_check_kernel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="multimodal.tests.test_mvml.MVMLTest.test_classifier">
+<span class="sig-name descname"><span class="pre">test_classifier</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#multimodal.tests.test_mvml.MVMLTest.test_classifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-multimodal.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-multimodal.tests" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2026, LIS UMR 7020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

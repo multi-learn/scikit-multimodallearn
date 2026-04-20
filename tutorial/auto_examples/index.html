@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multimodal Examples &mdash; scikit-multimodallearn 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MuCuMBo Examples" href="combo/index.html" />
+    <link rel="prev" title="Installation and development" href="../install_devel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            scikit-multimodallearn
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install_devel.html">Installation and development</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multimodal Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mucumbo-examples">MuCuMBo Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mumbo-examples">MuMBo Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mvml-examples">MVML Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-case-examples-on-digit">Use Case Examples on Digit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="combo/index.html">MuCuMBo Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mumbo/index.html">MuMBo Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mvml/index.html">MVML Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usecase/index.html">Use Case Examples on Digit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../times.html">Computation times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credits.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">scikit-multimodallearn</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Multimodal Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorial/auto_examples/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="multimodal-examples">
+<span id="examples"></span><h1>Multimodal Examples<a class="headerlink" href="#multimodal-examples" title="Permalink to this heading"></a></h1>
+<div class="sphx-glr-thumbnails"></div><section id="mucumbo-examples">
+<h2>MuCuMBo Examples<a class="headerlink" href="#mucumbo-examples" title="Permalink to this heading"></a></h2>
+<p>The following toy examples illustrate how the MuCuMBo algorithm exploits
+cooperation between views for classification.</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="In this toy example, we generate data from two classes, split between two two-dimensional views."><img alt="" src="../../_images/sphx_glr_plot_combo_2_views_2_classes_thumb.png" />
+<p><a class="reference internal" href="combo/plot_combo_2_views_2_classes.html"><span class="doc">MuCombo 2 views, 2 classes example</span></a></p>
+  <div class="sphx-glr-thumbnail-title">MuCombo 2 views, 2 classes example</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="In this toy example, we generate data from three classes, split between three two-dimensional views."><img alt="" src="../../_images/sphx_glr_plot_combo_3_views_3_classes_thumb.png" />
+<p><a class="reference internal" href="combo/plot_combo_3_views_3_classes.html"><span class="doc">MuCombo 3 views, 3 classes example</span></a></p>
+  <div class="sphx-glr-thumbnail-title">MuCombo 3 views, 3 classes example</div>
+</div></div></section>
+<section id="mumbo-examples">
+<h2>MuMBo Examples<a class="headerlink" href="#mumbo-examples" title="Permalink to this heading"></a></h2>
+<p>The following toy examples illustrate how the MuMBo algorithm exploits
+cooperation between views for classification.</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="In this toy example, we generate data from two classes, split between two two-dimensional views."><img alt="" src="../../_images/sphx_glr_plot_mumbo_2_views_2_classes_thumb.png" />
+<p><a class="reference internal" href="mumbo/plot_mumbo_2_views_2_classes.html"><span class="doc">Mumbo 2 views, 2 classes example</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Mumbo 2 views, 2 classes example</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="In this toy example, we generate data from three classes, split between three two-dimensional views."><img alt="" src="../../_images/sphx_glr_plot_mumbo_3_views_3_classes_thumb.png" />
+<p><a class="reference internal" href="mumbo/plot_mumbo_3_views_3_classes.html"><span class="doc">Mumbo 3 views, 3 classes example</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Mumbo 3 views, 3 classes example</div>
+</div></div></section>
+<section id="mvml-examples">
+<h2>MVML Examples<a class="headerlink" href="#mvml-examples" title="Permalink to this heading"></a></h2>
+<p>The following toy examples illustrate how the MVML algorithm</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Demonstration uses scikit-learn for retrieving datasets and for calculating rbf kernel function, see http://scikit-learn.org/stable/"><img alt="" src="../../_images/sphx_glr_plot_mvml__thumb.png" />
+<p><a class="reference internal" href="mvml/plot_mvml_.html"><span class="doc">MVML</span></a></p>
+  <div class="sphx-glr-thumbnail-title">MVML</div>
+</div></div></section>
+<section id="use-case-examples-on-digit">
+<h2>Use Case Examples on Digit<a class="headerlink" href="#use-case-examples-on-digit" title="Permalink to this heading"></a></h2>
+<p>The following toy examples illustrate how the multimodal as usecase on digit  dataset of sklearn</p>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Function plot_subplot"><img alt="" src="../../_images/sphx_glr_usecase_function_thumb.png" />
+<p><a class="reference internal" href="usecase/usecase_function.html"><span class="doc">Use Case Function module</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Use Case Function module</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="multi class digit from sklearn, multivue  - vue 0 digit data (color of sklearn)  - vue 1 gradiant of image in first direction  - vue 2 gradiant of image in second direction"><img alt="" src="../../_images/sphx_glr_plot_usecase_exampleMumBo_thumb.png" />
+<p><a class="reference internal" href="usecase/plot_usecase_exampleMumBo.html"><span class="doc">Use Case MumBo on digit</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Use Case MumBo on digit</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="multi class digit from sklearn, multivue  - vue 0 digit data (color of sklearn)  - vue 1 gradiant of image in first direction  - vue 2 gradiant of image in second direction"><img alt="" src="../../_images/sphx_glr_plot_usecase_exampleMVML_thumb.png" />
+<p><a class="reference internal" href="usecase/plot_usecase_exampleMVML.html"><span class="doc">Use Case of MVML on digit</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Use Case of MVML on digit</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Use Case MKL on digit"><img alt="" src="../../_images/sphx_glr_plot_usecase_exampleMKL_thumb.png" />
+<p><a class="reference internal" href="usecase/plot_usecase_exampleMKL.html"><span class="doc">Use Case MKL on digit</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Use Case MKL on digit</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="multi class digit from sklearn, multivue  - vue 0 digit data (color of sklearn)  - vue 1 gradiant of image in first direction  - vue 2 gradiant of image in second direction"><img alt="" src="../../_images/sphx_glr_plot_usecase_exampleMuComBo_thumb.png" />
+<p><a class="reference internal" href="usecase/plot_usecase_exampleMuComBo.html"><span class="doc">Use Case MuComBo on digit</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Use Case MuComBo on digit</div>
+</div></div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-footer sphx-glr-footer-gallery docutils container">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/e385453e7e2bb7413be92adc45dab349/auto_examples_python.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">auto_examples_python.zip</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/0d564ca942441bceef04c0e9fe1c7bca/auto_examples_jupyter.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Jupyter</span> <span class="pre">notebooks:</span> <span class="pre">auto_examples_jupyter.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../install_devel.html" class="btn btn-neutral float-left" title="Installation and development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="combo/index.html" class="btn btn-neutral float-right" title="MuCuMBo Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2026, LIS UMR 7020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

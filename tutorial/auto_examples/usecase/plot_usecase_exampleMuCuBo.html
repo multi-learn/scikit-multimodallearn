@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Use Case MuCumBo on digit &mdash; scikit-multimodallearn 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            scikit-multimodallearn
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install_devel.html">Installation and development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Multimodal Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../times.html">Computation times</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../credits.html">Credits</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">scikit-multimodallearn</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Use Case MuCumBo on digit</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/tutorial/auto_examples/usecase/plot_usecase_exampleMuCuBo.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-tutorial-auto-examples-usecase-plot-usecase-examplemucubo-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<section class="sphx-glr-example-title" id="use-case-mucumbo-on-digit">
+<span id="sphx-glr-tutorial-auto-examples-usecase-plot-usecase-examplemucubo-py"></span><h1>Use Case MuCumBo on digit<a class="headerlink" href="#use-case-mucumbo-on-digit" title="Permalink to this heading"></a></h1>
+<p>Use case for all classifier of multimodallearn  MuCumBo</p>
+<dl class="simple">
+<dt>multi class digit from sklearn, multivue</dt><dd><ul class="simple">
+<li><p>vue 0 digit data (color of sklearn)</p></li>
+<li><p>vue 1 gradiant of image in first direction</p></li>
+<li><p>vue 2 gradiant of image in second direction</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="../../../_images/sphx_glr_plot_usecase_exampleMuCuBo_001.png" class="sphx-glr-single-img" src="../../../_images/sphx_glr_plot_usecase_exampleMuCuBo_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>result of MuCumboClassifier on digit
+87.77777777777777
+/home/dominique/projets/ANR-Lives/scikit-multimodallearn/examples/usecase/plot_usecase_exampleMuCuBo.py:71: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.tree</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.datasets.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dict</span><span class="p">,</span> <span class="n">save_dict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.tests.data.get_dataset_path</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_dataset_path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.datasets.data_sample</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultiModalArray</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">multimodal.boosting.cumbo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MuCumboClassifier</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib._color_data</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mcd</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_subplot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Y_pred</span><span class="p">,</span> <span class="n">vue</span><span class="p">,</span> <span class="n">subplot</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+    <span class="n">cn</span> <span class="o">=</span> <span class="n">mcd</span><span class="o">.</span><span class="n">CSS4_COLORS</span>
+    <span class="n">classes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+    <span class="n">n_classes</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
+    <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">subplot</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">subplot</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">subplot</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="c1">#plt.scatter(X._extract_view(vue), X._extract_view(vue), s=40, c=&#39;gray&#39;,</span>
+    <span class="c1">#            edgecolors=(0, 0, 0))</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">),</span> <span class="n">cn</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+         <span class="n">Y_class</span><span class="p">,</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Y</span><span class="o">==</span><span class="n">classes</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+         <span class="n">Y_class_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">intersect1d</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Y_pred</span><span class="o">==</span><span class="n">classes</span><span class="p">[</span><span class="n">index</span><span class="p">])[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">Y_pred</span><span class="o">==</span><span class="n">Y</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+         <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">_extract_view</span><span class="p">(</span><span class="n">vue</span><span class="p">)[</span><span class="n">Y_class</span><span class="p">],</span>
+                     <span class="n">X</span><span class="o">.</span><span class="n">_extract_view</span><span class="p">(</span><span class="n">vue</span><span class="p">)[</span><span class="n">Y_class</span><span class="p">],</span>
+                     <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">cn</span><span class="p">[</span><span class="n">k</span><span class="p">],</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;class real class: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">))</span> <span class="c1">#</span>
+         <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">_extract_view</span><span class="p">(</span><span class="n">vue</span><span class="p">)[</span><span class="n">Y_class_pred</span><span class="p">],</span>
+                     <span class="n">X</span><span class="o">.</span><span class="n">_extract_view</span><span class="p">(</span><span class="n">vue</span><span class="p">)[</span><span class="n">Y_class_pred</span><span class="p">],</span>
+                     <span class="n">s</span><span class="o">=</span><span class="mi">160</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;class prediction: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="c1"># file = get_dataset_path(&quot;digit_histogram.npy&quot;)</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="n">get_dataset_path</span><span class="p">(</span><span class="s2">&quot;digit_col_grad.npy&quot;</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">get_dataset_path</span><span class="p">(</span><span class="s2">&quot;digit_y.npy&quot;</span><span class="p">))</span>
+    <span class="n">base_estimator</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">dic_digit</span> <span class="o">=</span> <span class="n">load_dict</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">XX</span> <span class="o">=</span><span class="n">MultiModalArray</span><span class="p">(</span><span class="n">dic_digit</span><span class="p">)</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">XX</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">est3</span> <span class="o">=</span> <span class="n">MuCumboClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">base_estimator</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred3</span> <span class="o">=</span> <span class="n">est3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">y_pred33</span> <span class="o">=</span> <span class="n">est3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;result of MuCumboClassifier on digit &quot;</span><span class="p">)</span>
+    <span class="n">result3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_pred3</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span> <span class="o">==</span> <span class="n">y_test</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result3</span><span class="p">)</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">12.</span><span class="p">,</span> <span class="mf">11.</span><span class="p">))</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;MuCumbo: result&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result3</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">plot_subplot</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_pred33</span>  <span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;train vue 0 color&quot;</span> <span class="p">)</span>
+    <span class="n">plot_subplot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span><span class="n">y_pred3</span> <span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;test vue 0 color&quot;</span> <span class="p">)</span>
+    <span class="n">plot_subplot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;test vue 1 gradiant 0&quot;</span> <span class="p">)</span>
+    <span class="n">plot_subplot</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span><span class="n">y_pred3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;test vue 2 gradiant 1&quot;</span> <span class="p">)</span>
+    <span class="c1"># plt.legend()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  14.171 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorial-auto-examples-usecase-plot-usecase-examplemucubo-py">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/5aac335a4467ef2d28ec7128f09c3e85/plot_usecase_exampleMuCuBo.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_usecase_exampleMuCuBo.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/848d4743c4b8af4094f839e25a574e52/plot_usecase_exampleMuCuBo.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_usecase_exampleMuCuBo.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020-2026, LIS UMR 7020.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
